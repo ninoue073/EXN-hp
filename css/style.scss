@@ -1,0 +1,371 @@
+// === Variables =====
+$perspective: 60rem;
+$font-size: 4.25rem;
+$font-size_side: 1.25rem;
+$split-position: 49%;
+$split-thickness: 4px;
+$split-thickness_side: 1px; // Main-colors
+$background-black: #1A1918;
+$txt-white: #FDFDFD;
+$box-black: #070101;
+$point-orange: #EE8F28; // Main-fonts
+$Ja: 'ヒラギノ明朝 ProN','Hiragino Mincho ProN','Yu Mincho Light','YuMincho','Yu Mincho','游明朝体',sans-serif;
+$En: 'Georgia',sans-serif;
+$h2-size: 2.8rem;
+$h3-size: 2rem;
+$txt: 1.6rem; // === Settings =====
+
+%font-settings {
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -webkit-font-kerning: normal;
+  -webkit-text-size-adjust: 100%;
+}
+// === Codepen Setup =====
+
+body,
+html {
+  width: 100%;
+  height: 100vh;
+  background: $background-black;
+  color: $txt-white;
+  font-family: $Ja;
+}
+
+header {
+  position: relative;
+  z-index: 100;
+}
+
+main {
+  margin-left: 20vw;
+  max-width: 2900px;
+  position: relative;
+  z-index: 1;
+}
+// メニュー ハンバーガー
+
+.Menu-hidden {
+  display: none;
+  @extend %font-settings;
+  width: 100vw;
+  height: 100vh;
+  background: $box-black;
+  font-family: $En;
+  transform: perspective($perspective);
+  position: fixed;
+  // display: flex;
+  align-items: center;
+  justify-content: center;
+}
+// === Menu <ul> =====
+
+.Menu-list {
+  font-size: $font-size;
+  line-height: 1.2;
+  text-transform: uppercase;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+// === Menu item =====
+
+.Menu-list-item {
+  position: relative;
+  color: transparent;
+  cursor: pointer;
+  // === Split Line =====
+  &::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: $split-position;
+    left: -10%;
+    right: -10%;
+    height: $split-thickness;
+    border-radius: $split-thickness;
+    margin-top: -($split-thickness / 2);
+    background: $point-orange;
+    transform: scale(0);
+    transition: transform 0.8s cubic-bezier(.16,1.08,.38,.98);
+    z-index: 1;
+  }
+}
+// === Top/bottom mask =====
+
+.Mask {
+  display: block;
+  position: absolute;
+  overflow: hidden;
+  color: $txt-white;
+  top: 0;
+  height: $split-position;
+  transition: all 0.8s cubic-bezier(.16,1.08,.38,.98);
+
+  span {
+    display: block;
+  }
+}
+// === Bottom mask specific =====
+
+.Mask + .Mask {
+  top: $split-position - 0.1;
+  height: 100 - $split-position + 0.1;
+
+  span {
+    transform: translateY(-$split-position);
+  }
+}
+// === Where the fun stuff happens =====
+
+.Menu-list-item:active,
+.Menu-list-item:hover {
+  .Mask {
+    color: $point-orange;
+    transform: skewX(12deg) translateX(5px);
+  }
+
+  .Mask + .Mask {
+    transform: skewX(12deg) translateX(-5px);
+  }
+
+  &::before {
+    transform: scale(1);
+  }
+}
+// メニュー サイド
+
+.Menu-side {
+  @extend %font-settings;
+  width: 20vw;
+  height: 100vh;
+  background: $box-black;
+  font-family: $En;
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  overflow: auto;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.rogo {
+  img {
+    max-width: 10rem;
+    height: auto;
+    margin: 2rem;
+  }
+}
+
+.Menu_side {
+  justify-content: center;
+  margin-top: 8vw;
+}
+// === Menu <ul> =====
+
+.Menu-list_side {
+  font-size: $font-size_side;
+  line-height: 2;
+  text-transform: uppercase;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+// === Menu item =====
+
+.Menu-list-item_side {
+  position: relative;
+  color: transparent;
+  cursor: pointer;
+  // === Split Line =====
+  &::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: $split-position;
+    left: -10%;
+    right: -10%;
+    height: $split-thickness_side;
+    border-radius: $split-thickness_side;
+    margin-top: -($split-thickness_side / 2);
+    background: $point-orange;
+    transform: scale(0);
+    transition: transform 0.8s cubic-bezier(.16,1.08,.38,.98);
+    z-index: 1;
+  }
+}
+// === Top/bottom mask =====
+
+.Mask_side {
+  display: block;
+  position: absolute;
+  overflow: hidden;
+  color: $txt-white;
+  top: 0;
+  height: $split-position;
+  transition: all 0.8s cubic-bezier(.16,1.08,.38,.98);
+
+  span {
+    display: block;
+  }
+}
+// === Bottom mask specific =====
+
+.Mask_side + .Mask_side {
+  top: $split-position - 0.1;
+  height: 100 - $split-position + 0.1;
+
+  span {
+    transform: translateY(-$split-position);
+  }
+}
+// === Where the fun stuff happens =====
+
+.Menu-list-item_side:active,
+.Menu-list-item_side:hover {
+  .Mask_side {
+    color: $point-orange;
+    transform: skewX(12deg) translateX(5px);
+  }
+
+  .Mask_side + .Mask_side {
+    transform: skewX(12deg) translateX(-5px);
+  }
+
+  &::before {
+    transform: scale(1);
+  }
+}
+// トップ
+
+.Top_img {
+  position: relative;
+  top: 0;
+  right: 0;
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+
+  .Top_txt1 {
+    color: $point-orange;
+    font-family: 'Zapfino','Segoe Script',sans-serif;
+    font-size: $h2-size;
+    transform: rotate(-13deg);
+    position: absolute;
+    top: 42vw;
+    right: 0;
+  }
+
+  .Top_txt2 {
+    position: absolute;
+    top: 42vw;
+    right: 3vw;
+  }
+
+  .outline {
+    display: inline-block;
+    color: #070101;
+    font-size: $h3-size;
+    text-shadow: 1px 1px 0 rgba(253, 253, 253, .6), -1px 1px 0 rgba(253, 253, 253, .6), 1px -1px 0 rgba(253, 253, 253, .6), -1px -1px 0 rgba(253, 253, 253, .6), 1px 0 0 rgba(253, 253, 253, .6), 0 1px 0 rgba(253, 253, 253, .6), -1px 0 0 rgba(253, 253, 253, .6), 0 -1px 0 rgba(253, 253, 253, .6);
+  }
+}
+// === title =====
+h2 {
+  font-size: $h2-size;
+}
+
+h3 {
+  font-size: $h3-size;
+}
+// === padding =====
+%padding-settings {
+  padding-left: 10vw;
+  padding-right: 10vw;
+}
+// === black_box =====
+%black-box_size {
+  background: $box-black;
+  width: 22vw;
+  height: 28vw;
+}
+
+%black-box_baseL {
+  position: relative;
+  top: 0;
+  left: 0;
+  z-index: 50;
+}
+
+%black-box_positionL {
+  position: absolute;
+  top: 0;
+  left:0;
+  z-index: 10;
+}
+
+%black-box_baseR {
+  position: relative;
+  top: 0;
+  right: 0;
+  z-index: 50;
+}
+
+%black-box_positionR {
+  position: absolute;
+  top: 0;
+  right:0;
+  z-index: 10;
+}
+
+// ニュース
+.News {
+  @extend %padding-settings;
+  padding-top: 10vw;
+  padding-bottom: 30vw;
+}
+
+.News_box {
+  @extend %black-box_baseL;
+}
+
+.black_box1 {
+  @extend %black-box_size;
+  @extend %black-box_positionL;
+}
+
+// サービス
+.Service {
+  @extend %padding-settings;
+  padding-bottom: 30vw;
+
+  h2,
+  ul {
+    text-align: right;
+  }
+
+  li {
+    display: block;
+    text-align: right;
+  }
+}
+
+.Service_menu_box {
+  @extend %black-box_baseR;
+}
+
+.black_box2 {
+  @extend %black-box_size;
+  @extend %black-box_positionR;
+}
+// お問い合わせ
+.Contact {
+  @extend %padding-settings;
+}
+// フェイスブック
+.Facebook {
+  @extend %padding-settings;
+}
