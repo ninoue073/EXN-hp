@@ -276,16 +276,19 @@ main {
 // === title =====
 h2 {
   font-size: $h2-size;
+  padding: 2.8vw 0;
 }
 
 h3 {
   font-size: $h3-size;
 }
-// === padding =====
-%padding-settings {
-  padding-left: 10vw;
-  padding-right: 10vw;
+// === margin =====
+%margin-settings {
+  margin-left: 5vw;
+  margin-right: 5vw;
+  margin-bottom: 30vw;
 }
+
 // === black_box =====
 %black-box_size {
   background: $box-black;
@@ -293,54 +296,124 @@ h3 {
   height: 28vw;
 }
 
-%black-box_baseL {
-  position: relative;
-  top: 0;
-  left: 0;
-  z-index: 50;
-}
-
-%black-box_positionL {
+%black-boxL {
   position: absolute;
   top: 0;
   left:0;
   z-index: 10;
 }
 
-%black-box_baseR {
-  position: relative;
-  top: 0;
-  right: 0;
-  z-index: 50;
-}
-
-%black-box_positionR {
+%black-boxR {
   position: absolute;
   top: 0;
   right:0;
   z-index: 10;
 }
 
+%black_box_base20L {
+  position: relative;
+  top: 0;
+  left: 0;
+  z-index: 20;
+}
+
+%black_box_base20R {
+  position: relative;
+  top: 0;
+  right: 0;
+  z-index: 20;
+}
+
+%black_box_base30L {
+  position: relative;
+  top: 0;
+  left: 11vw;
+  z-index: 30;
+}
+
+%black_box_base30R {
+  position: relative;
+  top: 0;
+  right: 11vw;
+  z-index: 30;
+}
+
+// === black_box_wide =====
+%black-box_wide_size {
+  background: $box-black;
+  width: 44vw;
+  height: 28vw;
+}
+
+%black_box_wide {
+  position: absolute;
+  top: 0;
+  left:-5vw;
+  z-index: 10;
+}
+
+%black_box_wide_base20 {
+  position: relative;
+  top: 0;
+  left: 0;
+  z-index: 20;
+}
+
+%black_box_wide_base30 {
+  position: relative;
+  z-index: 30;
+}
+
 // ニュース
 .News {
-  @extend %padding-settings;
-  padding-top: 10vw;
-  padding-bottom: 30vw;
+  @extend %margin-settings;
+  margin-top: 15vw;
 }
 
 .News_box {
-  @extend %black-box_baseL;
+  @extend %black_box_base20L;
+}
+
+.News_box_inner {
+  @extend %black_box_base30L;
+  width: 63vw;
+
+  li {
+    padding-bottom: 2vw;
+    text-shadow    :
+       1px  1px 1px #1a181a,
+      -1px  1px 1px #1a181a,
+       1px -1px 1px #1a181a,
+      -1px -1px 1px #1a181a,
+       1px  0px 1px #1a181a,
+       0px  1px 1px #1a181a,
+      -1px  0px 1px #1a181a,
+       0px -1px 1px #1a181a;
+  }
 }
 
 .black_box1 {
   @extend %black-box_size;
-  @extend %black-box_positionL;
+  @extend %black-boxL;
+}
+
+.News_img {
+position: absolute;
+top: 5vw;
+right: -5vw;
+z-index: 15;
+
+  img {
+    width: 33vw;
+    height: 44vw;
+    object-fit: cover;
+    object-position: 10% 90%;
+  }
 }
 
 // サービス
 .Service {
-  @extend %padding-settings;
-  padding-bottom: 30vw;
+  @extend %margin-settings;
 
   h2,
   ul {
@@ -354,18 +427,72 @@ h3 {
 }
 
 .Service_menu_box {
-  @extend %black-box_baseR;
+  @extend %black_box_base20R;
+}
+
+.Service_menu_box_inner {
+  @extend %black_box_base30R;
+
+    li {
+      padding-bottom: 2vw;
+    }
 }
 
 .black_box2 {
   @extend %black-box_size;
-  @extend %black-box_positionR;
+  @extend %black-boxR;
 }
+
+.Service_item1_box, .Service_item2_box, .Service_item3_box {
+  @extend %black_box_wide_base20;
+}
+
+.Service_item1_box_inner, .Service_item2_box_inner, .Service_item3_box_inner {
+  @extend %black_box_wide_base30;
+}
+
+.black_box_wide1, .black_box_wide2, .black_box_wide3{
+  @extend %black-box_wide_size;
+  @extend %black_box_wide;
+}
+
+
 // お問い合わせ
 .Contact {
-  @extend %padding-settings;
+  @extend %margin-settings;
 }
+
+.Contact_box {
+  @extend %black_box_base20L;
+}
+
+.Contact_box_inner {
+  @extend %black_box_base30L;
+}
+
+.black_box3 {
+  @extend %black-box_size;
+  @extend %black-boxL;
+}
+
 // フェイスブック
 .Facebook {
-  @extend %padding-settings;
+  @extend %margin-settings;
+
+  h2 {
+    text-align: right;
+  }
+}
+
+.Facebook_box {
+  @extend %black_box_base20R;
+}
+
+.Facebook_box_inner {
+  @extend %black_box_base30R;
+}
+
+.black_box4 {
+  @extend %black-box_size;
+  @extend %black-boxR;
 }
