@@ -39,9 +39,9 @@ header {
 
 main {
   margin-left: 20vw;
-  max-width: 2900px;
   position: relative;
   z-index: 1;
+  overflow: hidden;
 }
 // メニュー ハンバーガー
 
@@ -257,7 +257,7 @@ main {
     transform: rotate(-13deg);
     position: absolute;
     top: 42vw;
-    right: 0;
+    right: 1vw;
   }
 
   .Top_txt2 {
@@ -284,7 +284,6 @@ h3 {
   font-size: $h3-size;
 }
 // === margin =====
-
 %margin-settings {
   margin-left: 5vw;
   margin-right: 5vw;
