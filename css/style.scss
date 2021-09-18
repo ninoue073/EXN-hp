@@ -4,11 +4,11 @@ $font-size: 4.25rem;
 $font-size_side: 1.25rem;
 $split-position: 49%;
 $split-thickness: 4px;
-$split-thickness_side: 1px; // Main-colors
+$split-thickness_side: 1px;
 $background-black: #1A1918;
 $txt-white: #FDFDFD;
 $box-black: #070101;
-$point-orange: #EE8F28; // Main-fonts
+$point-orange: #EE8F28;
 $Ja: 'ヒラギノ明朝 ProN','Hiragino Mincho ProN','Yu Mincho Light','YuMincho','Yu Mincho','游明朝体',sans-serif;
 $En: 'Georgia',sans-serif;
 $h2-size: 2.8rem;
@@ -253,10 +253,10 @@ main {
   .Top_txt1 {
     color: $point-orange;
     font-family: 'Zapfino','Segoe Script',sans-serif;
-    font-size: $h2-size;
+    font-size: 2rem;
     transform: rotate(-13deg);
     position: absolute;
-    top: 42vw;
+    top: 43vw;
     right: 1vw;
   }
 
@@ -290,7 +290,7 @@ h3 {
   margin-bottom: 30vw;
 }
 // === black_box =====
-%black-box_size {
+%black-box {
   background: $box-black;
   width: 22vw;
   height: 28vw;
@@ -338,13 +338,10 @@ h3 {
   z-index: 30;
 }
 // === black_box_wide =====
-%black-box_wide_size {
+%black_box_wide {
   background: $box-black;
   width: 44vw;
   height: 28vw;
-}
-
-%black_box_wide {
   position: absolute;
   top: 0;
   left: -5vw;
@@ -366,6 +363,7 @@ h3 {
 .News {
   @extend %margin-settings;
   margin-top: 15vw;
+  padding-bottom: 10vw;
 }
 
 .News_box {
@@ -383,7 +381,7 @@ h3 {
 }
 
 .black_box1 {
-  @extend %black-box_size;
+  @extend %black-box;
   @extend %black-boxL;
 }
 
@@ -394,8 +392,8 @@ h3 {
   z-index: 15;
 
   img {
-    width: 33vw;
-    height: 44vw;
+    width: 29.3vw;
+    height: 37.3vw;
     object-fit: cover;
     object-position: 10% 90%;
   }
@@ -403,6 +401,15 @@ h3 {
 // サービス
 .Service {
   @extend %margin-settings;
+}
+
+.Service_menu_box {
+  @extend %black_box_base20R;
+  margin-bottom: 10vw;
+}
+
+.Service_menu_box_inner {
+  @extend %black_box_base30R;
 
   h2,
   ul {
@@ -412,44 +419,77 @@ h3 {
   li {
     display: block;
     text-align: right;
-  }
-}
-
-.Service_menu_box {
-  @extend %black_box_base20R;
-}
-
-.Service_menu_box_inner {
-  @extend %black_box_base30R;
-
-  li {
     padding-bottom: 2vw;
   }
 }
 
 .black_box2 {
-  @extend %black-box_size;
+  @extend %black-box;
   @extend %black-boxR;
 }
 
-.Service_item1_box,
-.Service_item2_box,
-.Service_item3_box {
+.Service_item {
+  margin-bottom: 15vw;
+}
+
+.Service_item_box {
   @extend %black_box_wide_base20;
+  text-align: right;
+
 }
 
-.Service_item1_box_inner,
-.Service_item2_box_inner,
-.Service_item3_box_inner {
+.Service_item_box_inner {
   @extend %black_box_wide_base30;
+
+  .Service_inner_right {
+    padding-left: 12vw;
+  }
 }
 
-.black_box_wide1,
-.black_box_wide2,
-.black_box_wide3 {
-  @extend %black-box_wide_size;
+.black_box_wide {
   @extend %black_box_wide;
 }
+
+.Service_img {
+  margin-bottom: 2vw;
+
+  img {
+    width: 60.5vw;
+    height: 35vw;
+    object-fit: cover;
+  }
+}
+
+.Service_item_box_inner {
+  h3 {
+    margin-bottom: 2vw;
+  }
+}
+
+.Service_txt_lead {
+  margin-bottom: 2vw;
+}
+
+.Service_txt_table {
+  tr, td {
+    border: solid 1px #FDFDFD;
+    padding: .5rem;
+  }
+}
+
+.Service_txt_other1 {
+padding-left: .5rem;
+margin: 2vw 0;
+}
+
+.Service_txt_other2 {
+margin-bottom: 1vw;
+}
+
+.Service_txt_orange {
+  color: $point-orange;
+}
+
 // お問い合わせ
 .Contact {
   @extend %margin-settings;
@@ -464,7 +504,7 @@ h3 {
 }
 
 .black_box3 {
-  @extend %black-box_size;
+  @extend %black-box;
   @extend %black-boxL;
 }
 // フェイスブック
@@ -485,6 +525,6 @@ h3 {
 }
 
 .black_box4 {
-  @extend %black-box_size;
+  @extend %black-box;
   @extend %black-boxR;
 }
