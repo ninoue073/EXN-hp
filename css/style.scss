@@ -474,6 +474,22 @@ h3 {
   margin-bottom: 2vw;
 }
 
+.Service_txt_stamp {
+  display: flex;
+  margin-bottom: 2rem;
+}
+
+.Service_txt_stamp_box {
+  padding: .5em 1em;
+    margin-right: .5em;
+    border: solid 1px #8D5417;
+    background: #170E02;
+
+    p {
+      color: #8D5417;
+    }
+}
+
 .Service_txt_table {
   td,
   tr {
@@ -511,7 +527,12 @@ h3 {
     width: 100%;
     height: auto;
     position: relative;
-    z-index: 50;
+    z-index: 20;
+  }
+
+  p {
+    position: relative;
+    z-index: 30;
   }
 }
 
