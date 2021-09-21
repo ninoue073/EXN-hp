@@ -30,11 +30,26 @@ html {
   background: $background-black;
   color: $txt-white;
   font-family: $Ja;
+  a {
+  // text-decoration: none;
+}
 }
 
 header {
   position: relative;
   z-index: 100;
+
+  a {
+    text-decoration: none;
+    &:hover {
+      text-decoration: none;
+      color: $box-black;
+    }
+    &::before {
+      text-decoration: none;
+      color: $box-black;
+    }
+  }
 }
 
 main {
@@ -292,7 +307,7 @@ h3 {
 }
 // === black_box =====
 
-%black-box {
+.black_box {
   background: $box-black;
   width: 22vw;
   height: 28vw;
@@ -341,7 +356,7 @@ h3 {
 }
 // === black_box_wide =====
 
-%black_box_wide {
+.black_box_wide {
   background: $box-black;
   width: 44vw;
   height: 28vw;
@@ -364,7 +379,7 @@ h3 {
 }
 // ニュース
 
-.News {
+#News {
   @extend %margin-settings;
   margin-top: 15vw;
   padding-bottom: 5vw;
@@ -384,8 +399,7 @@ h3 {
   }
 }
 
-.black_box1 {
-  @extend %black-box;
+#black_box1 {
   @extend %black-boxL;
 }
 
@@ -404,7 +418,7 @@ h3 {
 }
 // サービス
 
-.Service {
+#Service {
   @extend %margin-settings;
 }
 
@@ -428,8 +442,7 @@ h3 {
   }
 }
 
-.black_box2 {
-  @extend %black-box;
+#black_box2 {
   @extend %black-boxR;
 }
 
@@ -448,10 +461,6 @@ h3 {
   .Service_inner_right {
     padding-left: 12vw;
   }
-}
-
-.black_box_wide {
-  @extend %black_box_wide;
 }
 
 .Service_img {
@@ -480,14 +489,14 @@ h3 {
 }
 
 .Service_txt_stamp_box {
-  padding: .5em 1em;
-    margin-right: .5em;
-    border: solid 1px #8D5417;
-    background: #170E02;
+  padding: 0.5em 1em;
+  margin-right: 0.5em;
+  border: solid 1px #8D5417;
+  background: #170E02;
 
-    p {
-      color: #8D5417;
-    }
+  p {
+    color: #8D5417;
+  }
 }
 
 .Service_txt_table {
@@ -536,10 +545,7 @@ h3 {
   }
 }
 
-.color_box1,
-.color_box2,
-.color_box3,
-.color_box4 {
+.color_box {
   width: 13vw;
   height: 13vw;
   position: absolute;
@@ -548,23 +554,24 @@ h3 {
   z-index: 10;
 }
 
-.color_box1 {
+#color_box1 {
   background: #0C4A0D;
 }
 
-.color_box2 {
+#color_box2 {
   background: #134070;
 }
 
-.color_box3 {
+#color_box3 {
   background: #9C5D1A;
 }
 
-.color_box4 {
+#color_box4 {
   background: #7D1715;
 }
 // お問い合わせ
-.Contact {
+
+#Contact {
   @extend %margin-settings;
 }
 
@@ -576,8 +583,7 @@ h3 {
   @extend %black_box_base30L;
 }
 
-.black_box3 {
-  @extend %black-box;
+#black_box3 {
   @extend %black-boxL;
 }
 
@@ -605,7 +611,6 @@ h3 {
 
   a {
     color: $txt-white;
-    text-decoration: none;
 
     &:hover {
       color: $point-orange;
@@ -623,7 +628,8 @@ h3 {
   }
 }
 // フェイスブック
-.Facebook {
+
+#Facebook {
   @extend %margin-settings;
 
   h2 {
@@ -639,8 +645,7 @@ h3 {
   @extend %black_box_base30R;
 }
 
-.black_box4 {
-  @extend %black-box;
+#black_box4 {
   @extend %black-boxR;
 }
 
@@ -659,6 +664,47 @@ h3 {
   display: flex;
   justify-content: space-between;
 }
+// 会社概要
+#Company {
+  @extend %margin-settings;
+  margin-top: 15vw;
+}
+
+.Company_box {
+  @extend %black_box_base20L;
+}
+
+.Company_box_inner {
+  @extend %black_box_base30L;
+}
+
+#black_box5 {
+  @extend %black-boxL;
+}
+
+.Company_txt_table {
+  background: $background-black;
+
+  td,
+  tr {
+    border: solid 1px #FDFDFD;
+    padding: 0.5rem;
+    text-align: center;
+    vertical-align: middle;
+  }
+
+  .ttl {
+    width: 18vw;
+  }
+
+  .txt {
+    width: 38vw;
+  }
+}
+
+#Company_txt_table1 {
+  display: inline-block;
+}
 // フッター
 footer {
   text-align: center;
@@ -666,6 +712,5 @@ footer {
 
   a {
     color: $txt-white;
-    text-decoration: none;
   }
 }
