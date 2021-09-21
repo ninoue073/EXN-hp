@@ -13,7 +13,6 @@ $Ja: 'ヒラギノ明朝 ProN','Hiragino Mincho ProN','Yu Mincho Light','YuMinch
 $En: 'Georgia',sans-serif;
 $h2-size: 2.8rem;
 $h3-size: 2rem;
-$txt: 1.6rem;
 // === Settings =====
 %font-settings {
   font-style: normal;
@@ -407,18 +406,17 @@ h3 {
     h2 {
       text-align: right;
     }
+    a {
+      &:link, &:visited, &:hover, &:active {
+  color: $background-black;
+}
+    }
 }
 
-// === Menu <ul> =====
-.Service_menu_list {
-  font-size: $font-size_side;
-  line-height: 2;
-  text-transform: uppercase;
-  text-align: right;
-  align-items:flex-end;
-}
 // === Menu item =====
 .Service_menu_list_item {
+  line-height: 3;
+  text-align: right;
   position: relative;
   color: transparent;
   cursor: pointer;
@@ -428,8 +426,8 @@ h3 {
     display: block;
     position: absolute;
     top: $split-position;
-    left: -10%;
-    right: -10%;
+    left: 30%;
+    right: -5%;
     height: $split-thickness_side;
     border-radius: $split-thickness_side;
     margin-top: -($split-thickness_side / 2);
@@ -446,6 +444,7 @@ h3 {
   overflow: hidden;
   color: $txt-white;
   top: 0;
+  right: 0;
   height: $split-position;
   transition: all 0.8s cubic-bezier(.16,1.08,.38,.98);
   span {
@@ -477,10 +476,6 @@ h3 {
     transform: scale(1);
   }
 }
-
-
-
-
 
 #black_box2 {
   @extend %black-boxR;
@@ -641,21 +636,81 @@ h3 {
   }
 }
 
+  .e-mail {
+    position: relative;
+    bottom: 0;
+    right: 0;
+    width: 18rem;
+    border-bottom: 1px solid $txt-white;
+    margin: 11rem 0 0 2rem;
+
+    a {
+      color: $txt-white;
+
+      &:hover {
+        color: $point-orange;
+      }
+    }
+    
 .e-mail {
-  position: relative;
-  bottom: 0;
-  right: 0;
-  width: 18rem;
-  border-bottom: 1px solid $txt-white;
-  margin: 11rem 0 0 2rem;
-
-  a {
-    color: $txt-white;
-
-    &:hover {
-      color: $point-orange;
+    cursor: pointer;
+    // === Split Line =====
+    &::before {
+      content: '';
+      display: block;
+      position: absolute;
+      top: $split-position;
+      left: 25%;
+      right: -5%;
+      height: $split-thickness_side;
+      border-radius: $split-thickness_side;
+      margin-top: -($split-thickness_side / 2);
+      background: $point-orange;
+      transform: scale(0);
+      transition: transform 0.8s cubic-bezier(.16,1.08,.38,.98);
+      z-index: 1;
     }
   }
+  // === Top/bottom mask =====
+  .mail_mask {
+    display: block;
+    position: absolute;
+    overflow: hidden;
+    color: $txt-white;
+    top: 0;
+    right: 0;
+    height: $split-position;
+    transition: all 0.8s cubic-bezier(.16,1.08,.38,.98);
+    span {
+      display: block;
+    }
+  }
+  // === Bottom mask specific =====
+  .mail_mask + .mail_mask {
+    top: $split-position - 0.1;
+    height: 100 - $split-position + 0.1;
+
+    span {
+      transform: translateY(-$split-position);
+    }
+  }
+  // === Where the fun stuff happens =====
+  .e-mail:active,
+  .e-mail:hover {
+    .mail_mask {
+      color: $point-orange;
+      transform: skewX(12deg) translateX(5px);
+    }
+
+    .mail_mask + .mail_mask {
+      transform: skewX(12deg) translateX(-5px);
+    }
+
+    &::before {
+      transform: scale(1);
+    }
+  }
+
 
   .e-mail_arrow {
     position: absolute;
