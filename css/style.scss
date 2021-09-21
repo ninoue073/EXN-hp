@@ -13,8 +13,8 @@ $Ja: 'ヒラギノ明朝 ProN','Hiragino Mincho ProN','Yu Mincho Light','YuMinch
 $En: 'Georgia',sans-serif;
 $h2-size: 2.8rem;
 $h3-size: 2rem;
-$txt: 1.6rem; // === Settings =====
-
+$txt: 1.6rem;
+// === Settings =====
 %font-settings {
   font-style: normal;
   -webkit-font-smoothing: antialiased;
@@ -22,7 +22,6 @@ $txt: 1.6rem; // === Settings =====
   -webkit-text-size-adjust: 100%;
 }
 // === Codepen Setup =====
-
 body,
 html {
   width: 100%;
@@ -31,7 +30,7 @@ html {
   color: $txt-white;
   font-family: $Ja;
   a {
-  // text-decoration: none;
+  text-decoration: none;
 }
 }
 
@@ -40,15 +39,9 @@ header {
   z-index: 100;
 
   a {
-    text-decoration: none;
-    &:hover {
-      text-decoration: none;
-      color: $box-black;
-    }
-    &::before {
-      text-decoration: none;
-      color: $box-black;
-    }
+    &:link, &:visited, &:hover, &:active {
+  color: $box-black;
+}
   }
 }
 
@@ -59,7 +52,6 @@ main {
   overflow: hidden;
 }
 // メニュー ハンバーガー
-
 .Menu-hidden {
   display: none;
   @extend %font-settings;
@@ -74,7 +66,6 @@ main {
   justify-content: center;
 }
 // === Menu <ul> =====
-
 .Menu-list {
   font-size: $font-size;
   line-height: 1.2;
@@ -85,7 +76,6 @@ main {
   align-items: center;
 }
 // === Menu item =====
-
 .Menu-list-item {
   position: relative;
   color: transparent;
@@ -108,7 +98,6 @@ main {
   }
 }
 // === Top/bottom mask =====
-
 .Mask {
   display: block;
   position: absolute;
@@ -123,7 +112,6 @@ main {
   }
 }
 // === Bottom mask specific =====
-
 .Mask + .Mask {
   top: $split-position - 0.1;
   height: 100 - $split-position + 0.1;
@@ -133,7 +121,6 @@ main {
   }
 }
 // === Where the fun stuff happens =====
-
 .Menu-list-item:active,
 .Menu-list-item:hover {
   .Mask {
@@ -150,7 +137,6 @@ main {
   }
 }
 // メニュー サイド
-
 .Menu-side {
   @extend %font-settings;
   width: 20vw;
@@ -178,7 +164,6 @@ main {
   margin-top: 8vw;
 }
 // === Menu <ul> =====
-
 .Menu-list_side {
   font-size: $font-size_side;
   line-height: 2;
@@ -189,7 +174,6 @@ main {
   align-items: flex-start;
 }
 // === Menu item =====
-
 .Menu-list-item_side {
   position: relative;
   color: transparent;
@@ -212,7 +196,6 @@ main {
   }
 }
 // === Top/bottom mask =====
-
 .Mask_side {
   display: block;
   position: absolute;
@@ -227,7 +210,6 @@ main {
   }
 }
 // === Bottom mask specific =====
-
 .Mask_side + .Mask_side {
   top: $split-position - 0.1;
   height: 100 - $split-position + 0.1;
@@ -237,7 +219,6 @@ main {
   }
 }
 // === Where the fun stuff happens =====
-
 .Menu-list-item_side:active,
 .Menu-list-item_side:hover {
   .Mask_side {
@@ -254,7 +235,6 @@ main {
   }
 }
 // トップ
-
 .Top_img {
   position: relative;
   top: 0;
@@ -289,7 +269,6 @@ main {
   }
 }
 // === title =====
-
 h2 {
   font-size: $h2-size;
   padding: 2.8vw 0;
@@ -299,14 +278,12 @@ h3 {
   font-size: $h3-size;
 }
 // === margin =====
-
 %margin-settings {
   margin-left: 5vw;
   margin-right: 5vw;
   margin-bottom: 30vw;
 }
 // === black_box =====
-
 .black_box {
   background: $box-black;
   width: 22vw;
@@ -355,7 +332,6 @@ h3 {
   z-index: 30;
 }
 // === black_box_wide =====
-
 .black_box_wide {
   background: $box-black;
   width: 44vw;
@@ -378,7 +354,6 @@ h3 {
   z-index: 30;
 }
 // ニュース
-
 #News {
   @extend %margin-settings;
   margin-top: 15vw;
@@ -417,7 +392,6 @@ h3 {
   }
 }
 // サービス
-
 #Service {
   @extend %margin-settings;
 }
@@ -430,17 +404,83 @@ h3 {
 .Service_menu_box_inner {
   @extend %black_box_base30R;
 
-  h2,
-  ul {
-    text-align: right;
-  }
+    h2 {
+      text-align: right;
+    }
+}
 
-  li {
+// === Menu <ul> =====
+.Service_menu_list {
+  font-size: $font-size_side;
+  line-height: 2;
+  text-transform: uppercase;
+  text-align: right;
+  align-items:flex-end;
+}
+// === Menu item =====
+.Service_menu_list_item {
+  position: relative;
+  color: transparent;
+  cursor: pointer;
+  // === Split Line =====
+  &::before {
+    content: '';
     display: block;
-    text-align: right;
-    padding-bottom: 2vw;
+    position: absolute;
+    top: $split-position;
+    left: -10%;
+    right: -10%;
+    height: $split-thickness_side;
+    border-radius: $split-thickness_side;
+    margin-top: -($split-thickness_side / 2);
+    background: $point-orange;
+    transform: scale(0);
+    transition: transform 0.8s cubic-bezier(.16,1.08,.38,.98);
+    z-index: 1;
   }
 }
+// === Top/bottom mask =====
+.Service_mask {
+  display: block;
+  position: absolute;
+  overflow: hidden;
+  color: $txt-white;
+  top: 0;
+  height: $split-position;
+  transition: all 0.8s cubic-bezier(.16,1.08,.38,.98);
+  span {
+    display: block;
+  }
+}
+// === Bottom mask specific =====
+.Service_mask + .Service_mask {
+  top: $split-position - 0.1;
+  height: 100 - $split-position + 0.1;
+
+  span {
+    transform: translateY(-$split-position);
+  }
+}
+// === Where the fun stuff happens =====
+.Service_menu_list_item:active,
+.Service_menu_list_item:hover {
+  .Service_mask {
+    color: $point-orange;
+    transform: skewX(12deg) translateX(5px);
+  }
+
+  .Service_mask + .Service_mask {
+    transform: skewX(12deg) translateX(-5px);
+  }
+
+  &::before {
+    transform: scale(1);
+  }
+}
+
+
+
+
 
 #black_box2 {
   @extend %black-boxR;
@@ -628,7 +668,6 @@ h3 {
   }
 }
 // フェイスブック
-
 #Facebook {
   @extend %margin-settings;
 
