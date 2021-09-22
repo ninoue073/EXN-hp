@@ -20,6 +20,67 @@
 <body>
 
   <header>
+
+    <!-- メニュー ハンバーガー -->
+        <div class="header_menu">
+          <a class="header_menu_icon" href="#Menu-hidden">
+          <div class="header_menu_icon_bar">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          </a>
+        </div>
+
+        <div id="Menu-hidden">
+      <div class="Menu">
+        <ul class="Menu-list" data-offset="10">
+          <li class="Menu-list-item" data-offset="20" onclick>
+            <a href="../index.html#Top">
+            TOP
+            <span class="Mask"><span>TOP</span></span>
+            <span class="Mask"><span>TOP</span></span>
+            </a>
+          </li>
+          <li class="Menu-list-item" data-offset="16" onclick>
+            <a href="../index.html#News">
+            NEWS
+            <span class="Mask"><span>NEWS</span></span>
+            <span class="Mask"><span>NEWS</span></span>
+            </a>
+          </li>
+          <li class="Menu-list-item" data-offset="12" onclick>
+            <a href="../index.html#Service">
+            SERVICE
+            <span class="Mask"><span>SERVICE</span></span>
+            <span class="Mask"><span>SERVICE</span></span>
+            </a>
+          </li>
+          <li class="Menu-list-item" data-offset="8" onclick>
+            <a href="index.html">
+            COMPANY
+            <span class="Mask"><span>COMPANY</span></span>
+            <span class="Mask"><span>COMPANY</span></span>
+            </a>
+          </li>
+          <li class="Menu-list-item" data-offset="4" onclick>
+            <a href="../index.html#Contact">
+            CONTACT
+            <span class="Mask"><span>CONTACT</span></span>
+            <span class="Mask"><span>CONTACT</span></span>
+            </a>
+          </li>
+          <li class="Menu-list-item" data-offset="0" onclick>
+            <a href="../index.html#Facebook">
+            FACEBOOK
+            <span class="Mask"><span>FACEBOOK</span></span>
+            <span class="Mask"><span>FACEBOOK</span></span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
     <!-- メニュー サイド -->
     <div class="Menu-side">
       <div class="rogo">
@@ -73,56 +134,6 @@
       </div>
     </div>
 
-    <!-- @NOTE: the onclicks are used for touch devices since I'm lazy and didnt use <a> tags -->
-    <!-- メニュー ハンバーガー -->
-    <div class="Menu-hidden">
-      <div class="Menu">
-        <ul class="Menu-list" data-offset="10">
-          <li class="Menu-list-item" data-offset="20" onclick>
-            <a href="../index.html#Top">
-            TOP
-            <span class="Mask"><span>TOP</span></span>
-            <span class="Mask"><span>TOP</span></span>
-            </a>
-          </li>
-          <li class="Menu-list-item" data-offset="16" onclick>
-            <a href="../index.html#News">
-            NEWS
-            <span class="Mask"><span>NEWS</span></span>
-            <span class="Mask"><span>NEWS</span></span>
-            </a>
-          </li>
-          <li class="Menu-list-item" data-offset="12" onclick>
-            <a href="../index.html#Service">
-            SERVICE
-            <span class="Mask"><span>SERVICE</span></span>
-            <span class="Mask"><span>SERVICE</span></span>
-            </a>
-          </li>
-          <li class="Menu-list-item" data-offset="8" onclick>
-            <a href="index.html">
-            COMPANY
-            <span class="Mask"><span>COMPANY</span></span>
-            <span class="Mask"><span>COMPANY</span></span>
-            </a>
-          </li>
-          <li class="Menu-list-item" data-offset="4" onclick>
-            <a href="../index.html#Contact">
-            CONTACT
-            <span class="Mask"><span>CONTACT</span></span>
-            <span class="Mask"><span>CONTACT</span></span>
-            </a>
-          </li>
-          <li class="Menu-list-item" data-offset="0" onclick>
-            <a href="../index.html#Facebook">
-            FACEBOOK
-            <span class="Mask"><span>FACEBOOK</span></span>
-            <span class="Mask"><span>FACEBOOK</span></span>
-            </a>
-          </li>
-        </ul>
-      </div>
-    </div>
   </header>
 
   <main>
@@ -142,7 +153,7 @@
             </tr>
             <tr>
               <td class="ttl">所在地</td>
-              <td class="txt">〒872-0043　福岡市博多区堅粕3-13-17</td>
+              <td class="txt">〒872-0043　<br class="br_switch">福岡市博多区堅粕3-13-17</td>
             </tr>
             <tr>
               <td class="ttl">設　立</td>
@@ -150,7 +161,7 @@
             </tr>
             <tr>
               <td class="ttl">スタッフ人員</td>
-              <td class="txt">（従業員：6名）（登録スタッフ：18名）</td>
+              <td class="txt">（従業員：6名）<br class="br_switch">（登録スタッフ：18名）</td>
             </tr>
             <tr>
               <td class="ttl">事業内容</td>
@@ -185,7 +196,7 @@
             </tr>
             <tr>
               <td class="ttl">営業時間</td>
-              <td class="txt">AM10：00～PM18：00　　休業/土・日曜・祝日</td>
+              <td class="txt">AM10:00～PM18:00　<br class="br_switch">休業/土・日曜・祝日</td>
             </tr>
           </table>
         </div>
