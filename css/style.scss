@@ -247,11 +247,16 @@ main {
   .Top_txt1 {
     color: $point-orange;
     font-family: 'Zapfino','Segoe Script',sans-serif;
-    font-size: 2rem;
+    font-size: $h3-size;
     transform: rotate(-13deg);
     position: absolute;
     top: 43vw;
     right: 1vw;
+
+    // タブレット
+    @media screen and (max-width: 990px) {
+  font-size: $h3-size /1.3;
+}
   }
 
   .Top_txt2 {
@@ -265,6 +270,11 @@ main {
     color: #070101;
     font-size: $h3-size;
     text-shadow: 1px 1px 0 rgba(253, 253, 253, .6), -1px 1px 0 rgba(253, 253, 253, .6), 1px -1px 0 rgba(253, 253, 253, .6), -1px -1px 0 rgba(253, 253, 253, .6), 1px 0 0 rgba(253, 253, 253, .6), 0 1px 0 rgba(253, 253, 253, .6), -1px 0 0 rgba(253, 253, 253, .6), 0 -1px 0 rgba(253, 253, 253, .6);
+
+    // タブレット
+    @media screen and (max-width: 990px) {
+      font-size: $h3-size /1.3;
+    }
   }
 }
 // === title =====
@@ -761,7 +771,20 @@ h3 {
 .Facebook_link {
   display: flex;
   justify-content: space-between;
+  max-width: 720px;
+  margin: 0 auto;
 }
+
+.Facebook_link_container {
+  width: 340px;
+
+  // タブレット
+    @media screen and (max-width: 990px) {
+  width: 100%;
+		max-width: 340px;
+  }
+}
+
 // 会社概要
 #Company {
   @extend %margin-settings;
@@ -803,6 +826,7 @@ h3 {
 #Company_txt_table1 {
   display: inline-block;
 }
+
 // フッター
 footer {
   text-align: center;
