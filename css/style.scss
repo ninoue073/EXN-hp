@@ -402,6 +402,7 @@ h3 {
 
 .Service_menu_box_inner {
   @extend %black_box_base30R;
+  text-align: right;
 
     h2 {
       text-align: right;
@@ -413,6 +414,10 @@ h3 {
     }
 }
 
+// === Menu <ul> =====
+.Service_menu_list {
+  display: inline-block;
+}
 // === Menu item =====
 .Service_menu_list_item {
   line-height: 3;
@@ -426,7 +431,7 @@ h3 {
     display: block;
     position: absolute;
     top: $split-position;
-    left: 30%;
+    left: -5%;
     right: -5%;
     height: $split-thickness_side;
     border-radius: $split-thickness_side;
