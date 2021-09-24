@@ -877,19 +877,22 @@ display: inline-block;
   color: $point-orange;
 }
 
-// スマホ
-    @media screen and (max-width: 560px) {
+#txt_box {
+  display: flex;
 
-            #left_txt {
-              display: inline-block;
-              text-align:left;
-            }
+  // 改行
+    @media screen and (max-width: 980px) {
+flex-direction: column;
 
-            #right_txt {
-              display: inline-block;
-      text-align: right;
-           }
-  }
+              #left_txt {
+                text-align:left;
+              }
+
+              #right_txt {
+        text-align: right;
+             }
+    }
+}
 
 .Service_img_list {
   display: flex;
