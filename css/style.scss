@@ -1,9 +1,9 @@
 // === Variables =====
 $perspective: 60rem;
-$font-size: 4.25rem;
+$font-size: 3.25rem;
 $font-size_side: 1.25rem;
 $split-position: 49%;
-$split-thickness: 4px;
+$split-thickness: 2px;
 $split-thickness_side: 1px;
 $background-black: #1A1918;
 $txt-white: #FDFDFD;
@@ -42,10 +42,6 @@ html {
     @media screen and (max-width: 560px) {
       .br_switch {
         display: block;
-      }
-
-      .right_txt {
-        text-align: right;
       }
   }
 }
@@ -160,7 +156,6 @@ main {
           background: $box-black;
           font-family: $En;
         	z-index: 999;
-
         	align-items: center;
         	justify-content: center;
 
@@ -280,7 +275,6 @@ main {
     left: -10%;
     right: -10%;
     height: $split-thickness;
-    border-radius: $split-thickness;
     margin-top: -($split-thickness / 2);
     background: $point-orange;
     transform: scale(0);
@@ -394,7 +388,6 @@ main {
     left: -10%;
     right: -10%;
     height: $split-thickness_side;
-    border-radius: $split-thickness_side;
     margin-top: -($split-thickness_side / 2);
     background: $point-orange;
     transform: scale(0);
@@ -883,6 +876,20 @@ display: inline-block;
 .Service_txt_orange {
   color: $point-orange;
 }
+
+// スマホ
+    @media screen and (max-width: 560px) {
+
+            #left_txt {
+              display: inline-block;
+              text-align:left;
+            }
+
+            #right_txt {
+              display: inline-block;
+      text-align: right;
+           }
+  }
 
 .Service_img_list {
   display: flex;
