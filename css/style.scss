@@ -460,7 +460,7 @@ main {
 
     // タブレット
     @media screen and (max-width: 980px) {
-      font-size: $h3-size /1.3;
+      font-size: $h3-size /1.34;
     }
 
     // スマホ
@@ -489,7 +489,7 @@ main {
     text-shadow: 1px 1px 0 rgba(253, 253, 253, .6), -1px 1px 0 rgba(253, 253, 253, .6), 1px -1px 0 rgba(253, 253, 253, .6), -1px -1px 0 rgba(253, 253, 253, .6), 1px 0 0 rgba(253, 253, 253, .6), 0 1px 0 rgba(253, 253, 253, .6), -1px 0 0 rgba(253, 253, 253, .6), 0 -1px 0 rgba(253, 253, 253, .6);
     // タブレット
     @media screen and (max-width: 980px) {
-      font-size: $h3-size /1.3;
+      font-size: $h3-size /1.34;
     }
   }
 }
@@ -766,7 +766,8 @@ h3 {
   @extend %black-boxR;
 }
 
-.Service_item {
+#Service_item1,
+#Service_item2 {
   margin-bottom: 15vw;
 }
 
@@ -847,13 +848,21 @@ display: inline-block;
 
 .Service_txt_stamp_box {
   padding: .5em 1em;
-  margin-right: .5em;
   border: solid 1px #8D5417;
   background: #170E02;
+
+  // スマホ
+      @media screen and (max-width: 560px) {
+        padding: .5em ;
+    }
 
   p {
     color: #8D5417;
   }
+}
+
+#Service_txt_stamp_box1 {
+    margin-right: .5em;
 }
 
 .Service_txt_table {
@@ -881,7 +890,7 @@ display: inline-block;
   display: flex;
 
   // 改行
-    @media screen and (max-width: 980px) {
+    @media screen and (max-width: 890px) {
 flex-direction: column;
 
               #left_txt {
@@ -915,7 +924,7 @@ flex-direction: column;
 
   // スマホ
     @media screen and (max-width: 560px) {
-      width: 130px;
+      width: 120px;
       padding: 0 10px 10px;
   }
 
@@ -947,10 +956,10 @@ flex-direction: column;
 
   // スマホ
     @media screen and (max-width: 560px) {
-      width: 130px;
-      height: 130px;
-      top: 15px;
-      left: 25px;
+      width: 120px;
+      height: 120px;
+      top: 11px;
+      left: 21px;
   }
 }
 
@@ -973,6 +982,7 @@ flex-direction: column;
 
 #Contact {
   @extend %margin-settings;
+  padding-bottom: 30vw;
 }
 
 .Contact_box {
@@ -1110,8 +1120,9 @@ flex-direction: column;
 }
 // フェイスブック
 #Facebook {
-  @extend %margin-settings;
-  margin-bottom: 30vw;
+  margin-left: 5vw;
+  margin-right: 5vw;
+    margin-bottom: 30vw;
 
   h2 {
     text-align: right;
