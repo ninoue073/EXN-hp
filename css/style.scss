@@ -1220,12 +1220,12 @@ flex-direction: column;
 }
 
 .Facebook_link_container {
-  // width: 340px;
+  width: 340px;
 
   // タブレット
   @media screen and (max-width: 980px) {
-    // width: 100%;
-    // max-width: 340px;
+    width: 100%;
+    max-width: 340px;
     margin: 0 auto 3vw;
   }
 
