@@ -195,6 +195,27 @@
             </li>
           </ul>
         </div>
+        <!-- サービスメニュー スマホ用 -->
+        <div class="Service_menu_box_inner_mobile">
+          <h2>SERVICE</h2>
+          <ul class="Service_menu_list">
+            <li class="Service_menu_list_item">
+              <a href="#Service_item1">
+                印刷・広告・販促物の価格破壊を実現
+              </a>
+            </li>
+            <li class="Service_menu_list_item">
+              <a href="#Service_item2">
+                アミューズメント事業のサポート
+              </a>
+            </li>
+            <li class="Service_menu_list_item" id="Service_menu_list_item3">
+              <a href="#Service_item3">
+                生産者・製造者の皆様の<br>販路拡大・直販取引の効率向上
+              </a>
+            </li>
+          </ul>
+        </div>
         <div class="black_box" id="black_box2">
         </div>
       </div>
@@ -389,6 +410,44 @@
             width="340" height="130" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
         </div>
       </div>
+
+      <script>
+jQuery(function($){
+var first_width = $(window).width();
+
+var timer = false;
+$(window).resize(function() {
+    if (timer !== false) {
+        clearTimeout(timer);
+    }
+    timer = setTimeout(function() {
+        //resize完了時の動作
+        var width = $(window).width();
+        if(width!=first_width){
+
+            //console.log('resized');
+            fbiframe_reload();
+            first_width=width;
+        }
+    }, 200);
+});
+
+function fbiframe_reload(){//facebookウィジェットの再描画
+
+        var width = $("#side").width();//親要素のID,class要変更
+
+        var src = "https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fpassage.of.life.2014%2F%3Ffref%3Dts&tabs&width=340&height=130&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=false&appId"
+
+        $("#fbiframe").attr("src","");
+        $("#fbiframe").attr("src",src);
+
+        $("#fbiframe").attr("width",width);
+};
+
+fbiframe_reload();
+});
+</script>
+
     </section>
 
     <footer>
