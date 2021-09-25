@@ -1213,11 +1213,11 @@ flex-direction: column;
 .Facebook_link {
   display: flex;
   justify-content: space-between;
-  max-width: 620px;
+  max-width: 640px;
   margin: 0 auto;
 
-  // Facebook専用
-  @media screen and (max-width: 900px) {
+  // タブレット
+  @media screen and (max-width: 980px) {
     flex-direction: column-reverse;
   }
 }
