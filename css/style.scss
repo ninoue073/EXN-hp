@@ -70,9 +70,10 @@ main {
     margin-left: 0;
   }
 }
+
 // ヘッダーメニュー
 .header_menu {
-  // スマホ
+// スマホ
   @media screen and (max-width: 560px) {
     position: fixed;
     z-index: 110;
@@ -203,7 +204,7 @@ main {
 
   & > a {
   	font-size: 180%;
-  	color: #ffffff;
+  	color: $txt-white;
   	transition: all 0.3s ease-out;
   &:hover {
   	font-size: 230%;
@@ -324,6 +325,7 @@ main {
     transform: scale(1);
   }
 }
+
 // メニュー サイド
 
 .Menu-side {
@@ -525,7 +527,7 @@ h3 {
 %margin-settings {
   margin-left: 5vw;
   margin-right: 5vw;
-  padding-top: 30vw;
+  padding-top: 25vw;
 }
 // === black_box =====
 
@@ -1038,7 +1040,7 @@ flex-direction: column;
 
 #Contact {
   @extend %margin-settings;
-  padding-bottom: 30vw;
+  padding-bottom: 25vw;
 }
 
 .Contact_box {
@@ -1211,28 +1213,17 @@ flex-direction: column;
 .Facebook_link {
   display: flex;
   justify-content: space-between;
-  max-width: 720px;
+  max-width: 620px;
   margin: 0 auto;
-  // タブレット
-  @media screen and (max-width: 980px) {
+
+  // Facebook専用
+  @media screen and (max-width: 900px) {
     flex-direction: column-reverse;
   }
 }
 
 .Facebook_link_container {
-  width: 340px;
-
-  // タブレット
-  @media screen and (max-width: 980px) {
-    width: 100%;
-    max-width: 340px;
-    margin: 0 auto 3vw;
-  }
-
-  // スマホ
-      @media screen and (max-width: 560px) {
-
-    }
+text-align: center;
 }
 // 会社概要
 #Company {
@@ -1246,6 +1237,11 @@ flex-direction: column;
 
 .Company_box_inner {
   @extend %black_box_base30L;
+
+  // タブレット
+  @media screen and (max-width: 980px) {
+    text-align: center;
+  }
 }
 
 #black_box5 {
@@ -1254,6 +1250,12 @@ flex-direction: column;
 
 .Company_txt_table {
   background: $background-black;
+
+  // タブレット
+  @media screen and (max-width: 980px) {
+    display: inline-block;
+    text-align: center;
+  }
 
   td,
   tr {
