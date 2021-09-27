@@ -10,7 +10,7 @@
   <meta name="keywords" content="エクスン,exn,EXN,竹田津,大分,竹田津まさゆき,印刷,デザイン,特産品,大分,福岡,竹田津誠之,ゴルフ,facebook,広告代理店">
   <link rel="stylesheet" href="../css/reset.css">
   <link rel="stylesheet" href="../css/style.min.css">
-  <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script src="../js/slick.js"></script>
   <link href="https://use.fontawesome.com/releases/v5.10.2/css/all.css" rel="stylesheet">
   <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
@@ -22,117 +22,104 @@
   <header>
 
     <!-- メニュー ハンバーガー -->
-        <div class="header_menu">
-          <a class="header_menu_icon" href="#Menu-hidden">
-          <div class="header_menu_icon_bar">
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
-          </a>
+    <div class="header_menu">
+      <div class="Menu-hamburger">
+        <input class="toggle" type="checkbox" />
+        <div class="hamburger">
+          <span></span>
         </div>
 
-        <div id="Menu-hidden">
-      <div class="Menu">
-        <ul class="Menu-list" data-offset="10">
-          <li class="Menu-list-item" data-offset="20" onclick>
-            <a href="../index.html#Top">
-            TOP
-            <span class="Mask"><span>TOP</span></span>
-            <span class="Mask"><span>TOP</span></span>
-            </a>
-          </li>
-          <li class="Menu-list-item" data-offset="16" onclick>
-            <a href="../index.html#News">
-            NEWS
-            <span class="Mask"><span>NEWS</span></span>
-            <span class="Mask"><span>NEWS</span></span>
-            </a>
-          </li>
-          <li class="Menu-list-item" data-offset="12" onclick>
-            <a href="../index.html#Service">
-            SERVICE
-            <span class="Mask"><span>SERVICE</span></span>
-            <span class="Mask"><span>SERVICE</span></span>
-            </a>
-          </li>
-          <li class="Menu-list-item" data-offset="8" onclick>
-            <a href="index.html">
-            COMPANY
-            <span class="Mask"><span>COMPANY</span></span>
-            <span class="Mask"><span>COMPANY</span></span>
-            </a>
-          </li>
-          <li class="Menu-list-item" data-offset="4" onclick>
-            <a href="../index.html#Contact">
-            CONTACT
-            <span class="Mask"><span>CONTACT</span></span>
-            <span class="Mask"><span>CONTACT</span></span>
-            </a>
-          </li>
-          <li class="Menu-list-item" data-offset="0" onclick>
-            <a href="../index.html#Facebook">
-            FACEBOOK
-            <span class="Mask"><span>FACEBOOK</span></span>
-            <span class="Mask"><span>FACEBOOK</span></span>
-            </a>
-          </li>
-        </ul>
-      </div>
-    </div>
+        <div class="Menu">
+          <div>
+            <ul class="Menu-list" data-offset="10">
+              <li class="Menu-list-item" data-offset="20" onclick>
+                <a href="../index.html#Top">
+                  TOP
+                </a>
+              </li>
+              <li class="Menu-list-item" data-offset="16" onclick>
+                <a href="../index.html#News">
+                  NEWS
+                </a>
+              </li>
+              <li class="Menu-list-item" data-offset="12" onclick>
+                <a href="../index.html#Service">
+                  SERVICE
+                </a>
+              </li>
+              <li class="Menu-list-item" data-offset="8" onclick>
+                <a href="index.html">
+                  COMPANY
+                </a>
+              </li>
+              <li class="Menu-list-item" data-offset="4" onclick>
+                <a href="../index.html#Contact">
+                  CONTACT
+                </a>
+              </li>
+              <li class="Menu-list-item" data-offset="0" onclick>
+                <a href="../index.html#Facebook">
+                  FACEBOOK
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
 
-    <!-- メニュー サイド -->
-    <div class="Menu-side">
-      <div class="rogo">
-        <img src="../images/exn_rogo.jpg" alt="exn">
       </div>
-      <div class="Menu_side">
-        <ul class="Menu-list_side" data-offset="10">
-          <li class="Menu-list-item_side" data-offset="20" onclick>
-            <a href="../index.html#Top">
-            TOP
-            <span class="Mask_side"><span>TOP</span></span>
-            <span class="Mask_side"><span>TOP</span></span>
-            </a>
-          </li>
-          <li class="Menu-list-item_side" data-offset="16" onclick>
-            <a href="../index.html#News">
-            NEWS
-            <span class="Mask_side"><span>NEWS</span></span>
-            <span class="Mask_side"><span>NEWS</span></span>
-            </a>
-          </li>
-          <li class="Menu-list-item_side" data-offset="12" onclick>
-            <a href="../index.html#Service">
-            SERVICE
-            <span class="Mask_side"><span>SERVICE</span></span>
-            <span class="Mask_side"><span>SERVICE</span></span>
-            </a>
-          </li>
-          <li class="Menu-list-item_side" data-offset="8" onclick>
-            <a href="index.html">
-            COMPANY
-            <span class="Mask_side"><span>COMPANY</span></span>
-            <span class="Mask_side"><span>COMPANY</span></span>
-            </a>
-          </li>
-          <li class="Menu-list-item_side" data-offset="4" onclick>
-            <a href="../index.html#Contact">
-            CONTACT
-            <span class="Mask_side"><span>CONTACT</span></span>
-            <span class="Mask_side"><span>CONTACT</span></span>
-            </a>
-          </li>
-          <li class="Menu-list-item_side" data-offset="0" onclick>
-            <a href="../index.html#Facebook">
-            FACEBOOK
-            <span class="Mask_side"><span>FACEBOOK</span></span>
-            <span class="Mask_side"><span>FACEBOOK</span></span>
-            </a>
-          </li>
-        </ul>
+
+      <!-- メニュー サイド -->
+      <div class="Menu-side">
+        <div class="rogo">
+          <img src="../images/exn_rogo.jpg" alt="exn">
+        </div>
+        <div class="Menu_side">
+          <ul class="Menu-list_side" data-offset="10">
+            <li class="Menu-list-item_side" data-offset="20" onclick>
+              <a href="../index.html#Top">
+                TOP
+                <span class="Mask_side"><span>TOP</span></span>
+                <span class="Mask_side"><span>TOP</span></span>
+              </a>
+            </li>
+            <li class="Menu-list-item_side" data-offset="16" onclick>
+              <a href="../index.html#News">
+                NEWS
+                <span class="Mask_side"><span>NEWS</span></span>
+                <span class="Mask_side"><span>NEWS</span></span>
+              </a>
+            </li>
+            <li class="Menu-list-item_side" data-offset="12" onclick>
+              <a href="../index.html#Service">
+                SERVICE
+                <span class="Mask_side"><span>SERVICE</span></span>
+                <span class="Mask_side"><span>SERVICE</span></span>
+              </a>
+            </li>
+            <li class="Menu-list-item_side" data-offset="8" onclick>
+              <a href="index.html">
+                COMPANY
+                <span class="Mask_side"><span>COMPANY</span></span>
+                <span class="Mask_side"><span>COMPANY</span></span>
+              </a>
+            </li>
+            <li class="Menu-list-item_side" data-offset="4" onclick>
+              <a href="../index.html#Contact">
+                CONTACT
+                <span class="Mask_side"><span>CONTACT</span></span>
+                <span class="Mask_side"><span>CONTACT</span></span>
+              </a>
+            </li>
+            <li class="Menu-list-item_side" data-offset="0" onclick>
+              <a href="../index.html#Facebook">
+                FACEBOOK
+                <span class="Mask_side"><span>FACEBOOK</span></span>
+                <span class="Mask_side"><span>FACEBOOK</span></span>
+              </a>
+            </li>
+          </ul>
+        </div>
       </div>
-    </div>
 
   </header>
 
