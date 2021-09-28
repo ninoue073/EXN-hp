@@ -1129,19 +1129,11 @@ h3 {
 }
 
 .Facebook_link {
-  display: flex;
-  justify-content: space-between;
-  max-width: 640px;
-  margin: 0 auto;
   // タブレット
   @media screen and (max-width: 980px) {
-    flex-direction: column-reverse;
   }
 }
 
-.Facebook_link_container {
-  text-align: center;
-}
 
 .fbWrapper{
     height: 600px; //描画の度に高さが変動してカクつくのを防ぐ
