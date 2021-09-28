@@ -8,6 +8,7 @@
   <title>■EXN 【エクスン公式HP】</title>
   <meta name="description" content="デザイン制作会社を主に、パチンコ店のプロデュース事業を行っております。">
   <meta name="keywords" content="エクスン,exn,EXN,竹田津,大分,竹田津まさゆき,印刷,デザイン,特産品,大分,福岡,竹田津誠之,ゴルフ,facebook,広告代理店">
+  <meta name="format-detection" content="telephone=no">
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/style.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
@@ -415,17 +416,75 @@
         <p>主催：日本・ミャンマー映画制作委員会2015　/　制作プロダクション:株式会社E.x.N 　撮影協力(ミャンマー)：AUNGKOLATT MOTION PICTURES</p>
       </div>
       <div class="Facebook_link">
-        <div class="Facebook_link_container">
-          <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fexnkk%2F&tabs&width=280&height=107&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=false&appId"
-            style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
-        </div>
-        <div class="Facebook_link_container">
-          <iframe
-            src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fpassage.of.life.2014%2F%3Ffref%3Dts&tabs&width=280&height=107&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=false&appId"
-            style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
-        </div>
+        <div id="fb-root2"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/ja_JP/sdk.js#xfbml=1&version=v12.0" nonce="vmGL8AGQ"></script>
+<div class="fb-container">
+  <div class="fbWrapper" id="fbWrapper2" data-href="https://www.facebook.com/exnkk/" data-tabs="timeline" data-width="500" data-height="350" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="false"><blockquote cite="https://www.facebook.com/exnkk/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/exnkk/">株式会社E.x.N</a></blockquote></div>
       </div>
-    </section>
+
+      <div id="fb-root1"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/ja_JP/sdk.js#xfbml=1&version=v12.0" nonce="3kzeHcin"></script>
+    <div class="fb-container">
+      <div class="fbWrapper" id="fbWrapper1" data-href="https://www.facebook.com/passage.of.life.2014/" data-tabs="timeline" data-width="500" data-height="350" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="false"><blockquote cite="https://www.facebook.com/passage.of.life.2014/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/passage.of.life.2014/">映画『僕の帰る場所Passage of Life』</a></blockquote></div>
+      </div>
+    </div>
+
+    <script>
+    $(function() {
+        if($('#fbWrapper1' || '#fbWrapper2').length) {
+            facebookResize();
+        }
+    });
+
+    //facebookをリサイズする度に幅を調整
+    function facebookResize() {
+        for(i = 1; i < 3; i++) {
+          var $fbWrapper = $('#fbWrapper' + i);
+          var fbBeforeWidth = '';
+          var fbWidth = $fbWrapper.width();
+          //setTimeOutで負荷軽減
+          var timer = false;
+        $(window).on('load resize', function() {
+            if (timer !== false) {
+                clearTimeout(timer);
+            }
+            timer = setTimeout(function() {
+                fbWidth = $fbWrapper.width();
+                if(fbWidth !== fbBeforeWidth) {
+                  if(i = 1) {
+                    $fbWrapper.html(fbCodeGen1(fbWidth));
+                    window.FB.XFBML.parse();
+                    fbBeforeWidth = fbWidth;
+                  } else {
+                    $fbWrapper.html(fbCodeGen2(fbWidth));
+                    window.FB.XFBML.parse();
+                    fbBeforeWidth = fbWidth;
+                  }
+                }
+            }, 300);
+        });
+        console.log($fbWrapper);
+      }
+    }
+
+    //facebookのコードを生成
+    function fbCodeGen1(w) {
+        var hrefUrl = 'https://www.facebook.com/exnkk/'
+        var name = '株式会社E.x.N'
+
+        return '<div class="fb-page" data-href="' + hrefUrl + '" data-tabs="timeline" data-width="' + w + '" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="false"><blockquote cite="' + hrefUrl + '" class="fb-xfbml-parse-ignore"><a href="' + hrefUrl + '">' + name + '</a></blockquote></div>';
+    }
+
+    function fbCodeGen2(w) {
+      var hrefUrl = 'https://www.facebook.com/passage.of.life.2014/'
+      var name = '映画『僕の帰る場所Passage of Life』'
+
+        return '<div class="fb-page" data-href="' + hrefUrl + '" data-tabs="timeline" data-width="' + w + '" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="false"><blockquote cite="' + hrefUrl + '" class="fb-xfbml-parse-ignore"><a href="' + hrefUrl + '">' + name + '</a></blockquote></div>';
+    }
+
+    </script>
+
+
 
     <footer>
       <a href="index.html">EXN</a>
