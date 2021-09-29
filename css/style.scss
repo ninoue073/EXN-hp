@@ -1133,42 +1133,50 @@ h3 {
   justify-content: space-between;
 }
 
-.iframe-wrap1,
-.iframe-wrap2 {
+.iframe-wrap1 {
   position: relative;
+  top: 0;
+  left: 0;
   width: 100%;
   padding-top: 56.25%;
-  overflow:auto;
-  -webkit-overflow-scrolling:touch;
-  border:none;
-}
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+  border: none;
+  margin-right: 2vw;
 
- .iframe-wrap1{
- iframe {
-    position:absolute;
-    top:0;
-    left:0;
-    width:100%;
-    height:100%;
-    border:none;
-    display:block;
+  iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+    display: block;
   }
 }
 
-.iframe-wrap2{
+.iframe-wrap2 {
+  position: relative;
+  top: 0;
+  right: 0;
+  width: 100%;
+  padding-top: 56.25%;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+  border: none;
+  margin-left: 2vw;
+
   iframe {
-     position:absolute;
-     top:0;
-right: 0;
-    width:100%;
-     height:100%;
-     border:none;
-     display:block;
-   }
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+    display: block;
+  }
 }
-
 // 会社概要
-
 #Company {
   margin: 0 5vw 30vw;
   padding-top: 15vw;
@@ -1176,7 +1184,6 @@ right: 0;
   a {
     color: $txt-white;
   }
-
   @media(min-width: 560px) {
     a[href^="tel:"] {
       pointer-events: none;
