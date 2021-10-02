@@ -1128,40 +1128,39 @@ h3 {
   }
 }
 
-.FB_link {
+.FB_link_box {
   display: flex;
   justify-content: space-between;
 }
 
 .facebook-wrapper1 {
-  max-width: 500px;
-  /* Facebook Page Plugin の最大幅 */
-  margin: 0 auto;
+    max-width: 500px; /* Facebook Page Plugin の最大幅 */
+    margin: 0 auto;
 }
 
 .facebook-wrapper1 > .fb-page {
-  width: 100%;
+    width: 100%;
 }
 
 .facebook-wrapper1 > .fb-page > span,
 .facebook-wrapper1 iframe {
-  width: 100% !important;
+    width: 100% !important;
 }
 
 .facebook-wrapper2 {
-  max-width: 500px;
-  /* Facebook Page Plugin の最大幅 */
-  margin: 0 auto;
+    max-width: 500px; /* Facebook Page Plugin の最大幅 */
+    margin: 0 auto;
 }
 
 .facebook-wrapper2 > .fb-page {
-  width: 100%;
+    width: 100%;
 }
 
 .facebook-wrapper2 > .fb-page > span,
 .facebook-wrapper2 iframe {
-  width: 100% !important;
+    width: 100% !important;
 }
+
 // .iframe-wrap1 {
 //   position: relative;
 //   top: 0;
@@ -1206,7 +1205,6 @@ h3 {
 //   }
 // }
 // 会社概要
-
 #Company {
   margin: 0 5vw 30vw;
   padding-top: 15vw;
