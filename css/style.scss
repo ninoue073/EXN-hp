@@ -1,6 +1,6 @@
 // === Variables =====
 $perspective: 60rem;
-$font-size: 3.25rem;
+$font-size: 2.25rem;
 $font-size_side: 1.25rem;
 $split-position: 49%;
 $split-thickness: 2px;
@@ -116,7 +116,7 @@ main {
         overflow: hidden;
         width: 200vw;
         height: 200vw;
-        transition: all 0.4s ease;
+        transition: all .4s ease;
         -webkit-transform: scale(0);
         transform: scale(0);
         text-align: center;
@@ -135,12 +135,12 @@ main {
         margin: 0;
         padding: 0 1em;
         list-style: none;
-        transition: opacity 0.4s ease;
+        transition: opacity .4s ease;
         opacity: 0;
         color: $txt-white;
         font-family: $En;
         font-size: $font-size;
-        line-height: 1.2;
+        line-height: 1.4;
       }
 
       .Menu > div > ul > li {
@@ -182,7 +182,7 @@ main {
       }
 
       .toggle:checked ~ .Menu > div {
-        transition-duration: 0.75s;
+        transition-duration: .75s;
         -webkit-transform: scale(1);
         transform: scale(1);
       }
@@ -192,15 +192,15 @@ main {
       }
 
       .toggle:checked ~ .Menu > div > ul li:nth-of-type(1) {
-        transition-delay: 0.4s;
+        transition-delay: .4s;
       }
 
       .toggle:checked ~ .Menu > div > ul li:nth-of-type(2) {
-        transition-delay: 0.6s;
+        transition-delay: .6s;
       }
 
       .toggle:checked ~ .Menu > div > ul li:nth-of-type(3) {
-        transition-delay: 0.8s;
+        transition-delay: .8s;
       }
 
       .toggle:checked ~ .Menu > div > ul li:nth-of-type(4) {
@@ -227,9 +227,9 @@ main {
         display: block;
         width: 60px;
         height: 50px;
-        padding: 0.5em 1em;
+        padding: .5em 1em;
         cursor: pointer;
-        transition: box-shadow 0.4s ease;
+        transition: box-shadow .4s ease;
         -webkit-backface-visibility: hidden;
         backface-visibility: hidden;
       }
@@ -240,7 +240,7 @@ main {
         display: block;
         width: 100%;
         height: 2px;
-        transition: all 0.4s ease;
+        transition: all .4s ease;
         background: $txt-white;
       }
 
@@ -254,7 +254,7 @@ main {
         width: 100%;
         height: 2px;
         content: '';
-        transition: all 0.4s ease;
+        transition: all .4s ease;
         background: inherit;
       }
 
@@ -339,7 +339,7 @@ main {
     margin-top: -($split-thickness_side / 2);
     background: $point-orange;
     transform: scale(0);
-    transition: transform 0.8s cubic-bezier(.16,1.08,.38,.98);
+    transition: transform .8s cubic-bezier(.16,1.08,.38,.98);
     z-index: 1;
   }
 }
@@ -352,7 +352,7 @@ main {
   color: $txt-white;
   top: 0;
   height: $split-position;
-  transition: all 0.8s cubic-bezier(.16,1.08,.38,.98);
+  transition: all .8s cubic-bezier(.16,1.08,.38,.98);
 
   span {
     display: block;
@@ -361,8 +361,8 @@ main {
 // === Bottom mask specific =====
 
 .Mask_side + .Mask_side {
-  top: $split-position - 0.1;
-  height: 100 - $split-position + 0.1;
+  top: $split-position - .1;
+  height: 100 - $split-position + .1;
 
   span {
     transform: translateY(-$split-position);
@@ -450,7 +450,7 @@ h2 {
   padding: 2.8vw 0;
   // スマホ
   @media screen and (max-width: 560px) {
-    font-size: $h2-size / 1.3;
+    font-size: $h2-size / 1.4;
   }
 }
 
@@ -458,7 +458,7 @@ h3 {
   font-size: $h3-size;
   // スマホ
   @media screen and (max-width: 560px) {
-    font-size: $h3-size / 1.3;
+    font-size: $h3-size / 1.5;
   }
 }
 // === margin =====
@@ -468,6 +468,7 @@ h3 {
   margin-right: 5vw;
   padding-top: 15vw;
 }
+
 // === black_box =====
 
 .black_box {
@@ -607,6 +608,11 @@ h3 {
 
 #Service {
   @extend %margin-settings;
+
+    // スマホ
+    @media screen and (max-width: 560px) {
+      padding-top: 20vw;
+    }
 }
 
 .Service_menu_box {
@@ -617,6 +623,7 @@ h3 {
   display: block;
   @extend %black_box_base30R;
   text-align: right;
+
   // スマホ
   @media screen and (max-width: 560px) {
     display: none;
@@ -661,7 +668,7 @@ h3 {
     margin-top: -($split-thickness_side / 2);
     background: $point-orange;
     transform: scale(0);
-    transition: transform 0.8s cubic-bezier(.16,1.08,.38,.98);
+    transition: transform .8s cubic-bezier(.16,1.08,.38,.98);
     z-index: 1;
   }
 }
@@ -675,7 +682,7 @@ h3 {
   top: 0;
   right: 0;
   height: $split-position;
-  transition: all 0.8s cubic-bezier(.16,1.08,.38,.98);
+  transition: all .8s cubic-bezier(.16,1.08,.38,.98);
 
   span {
     display: block;
@@ -684,8 +691,8 @@ h3 {
 // === Bottom mask specific =====
 
 .Service_mask + .Service_mask {
-  top: $split-position - 0.1;
-  height: 100 - $split-position + 0.1;
+  top: $split-position - .1;
+  height: 100 - $split-position + .1;
 
   span {
     transform: translateY(-$split-position);
@@ -751,6 +758,11 @@ h3 {
 
 .Service_item {
   padding-top: 10vw;
+
+  // スマホ
+  @media screen and (max-width: 560px) {
+    padding-top: 15vw;
+  }
 }
 
 .Service_item_box {
@@ -798,10 +810,10 @@ h3 {
   }
 
   h3 {
-    margin-bottom: 2vw;
+    padding: 3vw 0 2vw;
     // スマホ
     @media screen and (max-width: 560px) {
-      margin-bottom: 6vw;
+      padding-bottom: 6vw;
     }
   }
 }
@@ -824,12 +836,12 @@ h3 {
 }
 
 .Service_txt_stamp_box {
-  padding: 0.5em 1em;
+  padding: .5em 1em;
   border: solid 1px #8D5417;
   background: #170E02;
   // スマホ
   @media screen and (max-width: 560px) {
-    padding: 0.8em 0.3em;
+    padding: .8em .3em;
   }
 
   p {
@@ -838,10 +850,10 @@ h3 {
 }
 
 #Service_txt_stamp_box1 {
-  margin-right: 0.5em;
+  margin-right: .5em;
   // スマホ
   @media screen and (max-width: 560px) {
-    margin-right: 0.3em;
+    margin-right: .3em;
   }
 }
 
@@ -849,12 +861,12 @@ h3 {
   td,
   tr {
     border: solid 1px #FDFDFD;
-    padding: 0.5rem;
+    padding: .5rem;
   }
 }
 
 .Service_txt_other1 {
-  padding-left: 0.5rem;
+  padding-left: .5rem;
   margin: 2vw 0;
 }
 
@@ -919,7 +931,7 @@ h3 {
   p {
     position: relative;
     z-index: 30;
-    font-size: 0.9rem;
+    font-size: .9rem;
   }
 }
 
@@ -958,6 +970,11 @@ h3 {
 
 #Contact {
   @extend %margin-settings;
+
+    // スマホ
+    @media screen and (max-width: 560px) {
+      padding-top: 20vw;
+    }
 }
 
 .Contact_box {
@@ -1036,7 +1053,7 @@ h3 {
     margin-top: -($split-thickness_side / 2);
     background: $point-orange;
     transform: scale(0);
-    transition: transform 0.8s cubic-bezier(.16,1.08,.38,.98);
+    transition: transform .8s cubic-bezier(.16,1.08,.38,.98);
     z-index: 1;
   }
 }
@@ -1049,7 +1066,7 @@ h3 {
   color: $txt-white;
   top: 0;
   height: $split-position;
-  transition: all 0.8s cubic-bezier(.16,1.08,.38,.98);
+  transition: all .8s cubic-bezier(.16,1.08,.38,.98);
 
   span {
     display: block;
@@ -1058,8 +1075,8 @@ h3 {
 // === Bottom mask specific =====
 
 .mail_mask + .mail_mask {
-  top: $split-position - 0.1;
-  height: 100 - $split-position + 0.1;
+  top: $split-position - .1;
+  height: 100 - $split-position + .1;
 
   span {
     transform: translateY(-$split-position);
@@ -1100,6 +1117,11 @@ h3 {
   margin-bottom: 30vw;
   padding-top: 25vw;
 
+    // スマホ
+    @media screen and (max-width: 560px) {
+      padding-top: 30vw;
+    }
+
   h2 {
     text-align: right;
   }
@@ -1128,82 +1150,73 @@ h3 {
   }
 }
 
-.FB_link_box {
-  display: flex;
-  justify-content: space-between;
+.FB_link {
+  display: table;
+  width: 100%;
+  // スマホ
+  @media screen and (max-width: 560px) {
+    display: block;
+  }
+}
+
+.FB_link_box1 {
+  display: table-cell;
+  width: 33%;
+  padding-right: 1vw;
+  overflow: hidden;
+  // スマホ
+  @media screen and (max-width: 560px) {
+    display: block;
+    width: 100%;
+    margin: 0 auto 5vw;
+    padding-right: 0;
+  }
+}
+
+.FB_link_box2 {
+  display: table-cell;
+  width: 33%;
+  padding-left: 1vw;
+  overflow: hidden;
+  // スマホ
+  @media screen and (max-width: 560px) {
+    display: block;
+    width: 100%;
+    padding-left: 0;
+    text-align: center;
+    margin: 0 auto;
+  }
 }
 
 .facebook-wrapper1 {
-    max-width: 500px; /* Facebook Page Plugin の最大幅 */
-    margin: 0 auto;
-}
+  max-width: 500px;
+  /* Facebook Page Plugin の最大幅 */
+  margin: 0 auto;
 
-.facebook-wrapper1 > .fb-page {
+  & > .fb-page {
     width: 100%;
+  }
 }
 
 .facebook-wrapper1 > .fb-page > span,
 .facebook-wrapper1 iframe {
-    width: 100% !important;
+  width: 100% !important;
 }
 
 .facebook-wrapper2 {
-    max-width: 500px; /* Facebook Page Plugin の最大幅 */
-    margin: 0 auto;
-}
+  max-width: 500px;
+  /* Facebook Page Plugin の最大幅 */
+  margin: 0 auto;
 
-.facebook-wrapper2 > .fb-page {
+  & > .fb-page {
     width: 100%;
+  }
 }
 
 .facebook-wrapper2 > .fb-page > span,
 .facebook-wrapper2 iframe {
-    width: 100% !important;
+  width: 100% !important;
 }
-
-// .iframe-wrap1 {
-//   position: relative;
-//   top: 0;
-//   left: 0;
-//   width: 100%;
-//   padding-top: 56.25%;
-//   overflow: auto;
-//   -webkit-overflow-scrolling: touch;
-//   border: none;
-//   margin-right: 2vw;
-//
-//   iframe {
-//     position: absolute;
-//     top: 0;
-//     left: 0;
-//     width: 100%;
-//     height: 100%;
-//     border: none;
-//     display: block;
-//   }
-// }
-//
-// .iframe-wrap2 {
-//   position: relative;
-//   top: 0;
-//   right: 0;
-//   width: 100%;
-//   padding-top: 56.25%;
-//   overflow: auto;
-//   -webkit-overflow-scrolling: touch;
-//   border: none;
-//   margin-left: 2vw;
-//
-//   iframe {
-//     position: absolute;
-//     top: 0;
-//     right: 0;
-//     width: 100%;
-//     height: 100%;
-//     border: none;
-//     display: block;
-//   }
-// }
 // 会社概要
 #Company {
   margin: 0 5vw 30vw;
@@ -1246,7 +1259,7 @@ h3 {
   td,
   tr {
     border: solid 1px #FDFDFD;
-    padding: 0.5rem;
+    padding: .5rem;
     text-align: center;
     vertical-align: middle;
   }
