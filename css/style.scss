@@ -1164,10 +1164,11 @@ h3 {
   width: 33%;
   padding-right: 1vw;
   overflow: hidden;
+
   // スマホ
   @media screen and (max-width: 560px) {
     display: block;
-    width: 100%;
+    width: 80%;
     margin: 0 auto 5vw;
     padding-right: 0;
   }
@@ -1178,15 +1179,16 @@ h3 {
   width: 33%;
   padding-left: 1vw;
   overflow: hidden;
+
   // スマホ
   @media screen and (max-width: 560px) {
     display: block;
-    width: 100%;
+    width: 80%;
     padding-left: 0;
-    text-align: center;
     margin: 0 auto;
   }
 }
+
 
 .facebook-wrapper1 {
   max-width: 500px;
