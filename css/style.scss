@@ -30,6 +30,11 @@ html {
   color: $txt-white;
   font-family: $Ja;
 
+  // スマホ
+  @media screen and (max-width: 560px) {
+font-size: 90%;
+ }
+
   a {
     text-decoration: none;
   }
@@ -411,7 +416,7 @@ main {
     }
     // スマホ
     @media screen and (max-width: 560px) {
-      font-size: $h3-size /1.8;
+      font-size: $h3-size /1.5;
       top: 48vw;
       right: 1vw;
     }
@@ -439,7 +444,7 @@ main {
     }
     // スマホ
     @media screen and (max-width: 560px) {
-      font-size: $h3-size /1.8;
+      font-size: $h3-size /1.5;
     }
   }
 }
@@ -450,7 +455,7 @@ h2 {
   padding: 2.8vw 0;
   // スマホ
   @media screen and (max-width: 560px) {
-    font-size: $h2-size / 1.4;
+    font-size: $h2-size / 1.5;
   }
 }
 
@@ -991,6 +996,11 @@ h3 {
 
 .Contact_box_inner_flex {
   display: flex;
+
+  // スマホ
+  @media screen and (max-width: 560px) {
+flex-direction: column;
+  }
 }
 
 .Contact_img {
@@ -1014,17 +1024,19 @@ h3 {
   width: 18rem;
   border-bottom: 1px solid $txt-white;
   margin: 11rem 0 0 2rem;
+
   // タブレット
   @media screen and (max-width: 980px) {
     width: 16rem;
     bottom: -60px;
     right: 85px;
   }
+
   // スマホ
   @media screen and (max-width: 560px) {
     width: 14rem;
-    bottom: 40px;
-    right: 100px;
+    bottom: 100px;
+    right: 0;
   }
 
   a {
