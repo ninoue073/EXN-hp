@@ -938,6 +938,7 @@ h3 {
     position: relative;
     z-index: 30;
     font-size: .9rem;
+    margin-top: 2vw;
   }
 }
 
@@ -1128,11 +1129,11 @@ flex-direction: column;
   margin-left: 5vw;
   margin-right: 5vw;
   margin-bottom: 30vw;
-  padding-top: 25vw;
+  padding-top: 15vw;
 
     // スマホ
     @media screen and (max-width: 560px) {
-      padding-top: 30vw;
+      padding-top: 20vw;
     }
 
   h2 {
@@ -1201,7 +1202,6 @@ flex-direction: column;
     margin: 0 auto;
   }
 }
-
 
 .facebook-wrapper1 {
   max-width: 500px;
