@@ -29,11 +29,10 @@ html {
   background: $background-black;
   color: $txt-white;
   font-family: $Ja;
-
   // スマホ
   @media screen and (max-width: 560px) {
-font-size: 90%;
- }
+    font-size: 90%;
+  }
 
   a {
     text-decoration: none;
@@ -56,7 +55,7 @@ header {
 }
 
 main {
-  max-width:1920px;
+  max-width: 1920px;
   margin-left: 20vw;
   position: relative;
   z-index: 1;
@@ -122,7 +121,7 @@ main {
         overflow: hidden;
         width: 200vw;
         height: 200vw;
-        transition: all .4s ease;
+        transition: all 0.4s ease;
         -webkit-transform: scale(0);
         transform: scale(0);
         text-align: center;
@@ -141,7 +140,7 @@ main {
         margin: 0;
         padding: 0 1em;
         list-style: none;
-        transition: opacity .4s ease;
+        transition: opacity 0.4s ease;
         opacity: 0;
         color: $txt-white;
         font-family: $En;
@@ -188,7 +187,7 @@ main {
       }
 
       .toggle:checked ~ .Menu > div {
-        transition-duration: .75s;
+        transition-duration: 0.75s;
         -webkit-transform: scale(1);
         transform: scale(1);
       }
@@ -198,15 +197,15 @@ main {
       }
 
       .toggle:checked ~ .Menu > div > ul li:nth-of-type(1) {
-        transition-delay: .4s;
+        transition-delay: 0.4s;
       }
 
       .toggle:checked ~ .Menu > div > ul li:nth-of-type(2) {
-        transition-delay: .6s;
+        transition-delay: 0.6s;
       }
 
       .toggle:checked ~ .Menu > div > ul li:nth-of-type(3) {
-        transition-delay: .8s;
+        transition-delay: 0.8s;
       }
 
       .toggle:checked ~ .Menu > div > ul li:nth-of-type(4) {
@@ -233,9 +232,9 @@ main {
         display: block;
         width: 60px;
         height: 50px;
-        padding: .5em 1em;
+        padding: 0.5em 1em;
         cursor: pointer;
-        transition: box-shadow .4s ease;
+        transition: box-shadow 0.4s ease;
         -webkit-backface-visibility: hidden;
         backface-visibility: hidden;
       }
@@ -246,7 +245,7 @@ main {
         display: block;
         width: 100%;
         height: 2px;
-        transition: all .4s ease;
+        transition: all 0.4s ease;
         background: $txt-white;
       }
 
@@ -260,7 +259,7 @@ main {
         width: 100%;
         height: 2px;
         content: '';
-        transition: all .4s ease;
+        transition: all 0.4s ease;
         background: inherit;
       }
 
@@ -345,7 +344,7 @@ main {
     margin-top: -($split-thickness_side / 2);
     background: $point-orange;
     transform: scale(0);
-    transition: transform .8s cubic-bezier(.16,1.08,.38,.98);
+    transition: transform 0.8s cubic-bezier(.16,1.08,.38,.98);
     z-index: 1;
   }
 }
@@ -358,7 +357,7 @@ main {
   color: $txt-white;
   top: 0;
   height: $split-position;
-  transition: all .8s cubic-bezier(.16,1.08,.38,.98);
+  transition: all 0.8s cubic-bezier(.16,1.08,.38,.98);
 
   span {
     display: block;
@@ -368,7 +367,7 @@ main {
 
 .Mask_side + .Mask_side {
   top: $split-position - .1;
-  height: 100 - $split-position + .1;
+  height: 100 - $split-position + 0.1;
 
   span {
     transform: translateY(-$split-position);
@@ -474,9 +473,7 @@ h3 {
   margin-right: 5vw;
   padding-top: 15vw;
 }
-
 // === black_box =====
-
 .black_box {
   background: $box-black;
   width: 22vw;
@@ -614,11 +611,10 @@ h3 {
 
 #Service {
   @extend %margin-settings;
-
-    // スマホ
-    @media screen and (max-width: 560px) {
-      padding-top: 20vw;
-    }
+  // スマホ
+  @media screen and (max-width: 560px) {
+    padding-top: 20vw;
+  }
 }
 
 .Service_menu_box {
@@ -629,7 +625,6 @@ h3 {
   display: block;
   @extend %black_box_base30R;
   text-align: right;
-
   // スマホ
   @media screen and (max-width: 560px) {
     display: none;
@@ -674,7 +669,7 @@ h3 {
     margin-top: -($split-thickness_side / 2);
     background: $point-orange;
     transform: scale(0);
-    transition: transform .8s cubic-bezier(.16,1.08,.38,.98);
+    transition: transform 0.8s cubic-bezier(.16,1.08,.38,.98);
     z-index: 1;
   }
 }
@@ -688,7 +683,7 @@ h3 {
   top: 0;
   right: 0;
   height: $split-position;
-  transition: all .8s cubic-bezier(.16,1.08,.38,.98);
+  transition: all 0.8s cubic-bezier(.16,1.08,.38,.98);
 
   span {
     display: block;
@@ -698,7 +693,7 @@ h3 {
 
 .Service_mask + .Service_mask {
   top: $split-position - .1;
-  height: 100 - $split-position + .1;
+  height: 100 - $split-position + 0.1;
 
   span {
     transform: translateY(-$split-position);
@@ -764,7 +759,6 @@ h3 {
 
 .Service_item {
   padding-top: 10vw;
-
   // スマホ
   @media screen and (max-width: 560px) {
     padding-top: 15vw;
@@ -781,22 +775,11 @@ h3 {
 
   .Service_inner_right {
     padding-left: 12vw;
-
     // スマホ
     @media screen and (max-width: 560px) {
       padding-left: 0;
       text-align: center;
     }
-  }
-
-  .Service_inner_right_flex {
-    display: flex;
-    justify-content: space-between;
-
-    // タブレット
-    @media screen and (max-width: 980px) {
-    flex-direction: column;
-  }
   }
 }
 
@@ -853,12 +836,12 @@ h3 {
 }
 
 .Service_txt_stamp_box {
-  padding: .5em 1em;
+  padding: 0.5em 1em;
   border: solid 1px #8D5417;
   background: #170E02;
   // スマホ
   @media screen and (max-width: 560px) {
-    padding: .8em .3em;
+    padding: 0.8em 0.3em;
   }
 
   p {
@@ -867,10 +850,10 @@ h3 {
 }
 
 #Service_txt_stamp_box1 {
-  margin-right: .5em;
+  margin-right: 0.5em;
   // スマホ
   @media screen and (max-width: 560px) {
-    margin-right: .3em;
+    margin-right: 0.3em;
   }
 }
 
@@ -878,12 +861,12 @@ h3 {
   td,
   tr {
     border: solid 1px #FDFDFD;
-    padding: .5rem;
+    padding: 0.5rem;
   }
 }
 
 .Service_txt_other1 {
-  padding-left: .5rem;
+  padding-left: 0.5rem;
   margin: 2vw 0;
 }
 
@@ -948,7 +931,7 @@ h3 {
   p {
     position: relative;
     z-index: 30;
-    font-size: .9rem;
+    font-size: 0.9rem;
     margin-top: 2vw;
   }
 }
@@ -988,11 +971,10 @@ h3 {
 
 #Contact {
   @extend %margin-settings;
-
-    // スマホ
-    @media screen and (max-width: 560px) {
-      padding-top: 20vw;
-    }
+  // スマホ
+  @media screen and (max-width: 560px) {
+    padding-top: 20vw;
+  }
 }
 
 .Contact_box {
@@ -1009,10 +991,9 @@ h3 {
 
 .Contact_box_inner_flex {
   display: flex;
-
   // スマホ
   @media screen and (max-width: 560px) {
-flex-direction: column;
+    flex-direction: column;
   }
 }
 
@@ -1037,17 +1018,15 @@ flex-direction: column;
   width: 18rem;
   border-bottom: 1px solid $txt-white;
   margin: 11rem 0 0 2rem;
-
   // タブレット
   @media screen and (max-width: 980px) {
     width: 16rem;
     bottom: -60px;
     right: 85px;
   }
-
   // スマホ
   @media screen and (max-width: 560px) {
-   width: 14rem;
+    width: 14rem;
     bottom: 100px;
     right: 0;
   }
@@ -1078,7 +1057,7 @@ flex-direction: column;
     margin-top: -($split-thickness_side / 2);
     background: $point-orange;
     transform: scale(0);
-    transition: transform .8s cubic-bezier(.16,1.08,.38,.98);
+    transition: transform 0.8s cubic-bezier(.16,1.08,.38,.98);
     z-index: 1;
   }
 }
@@ -1091,7 +1070,7 @@ flex-direction: column;
   color: $txt-white;
   top: 0;
   height: $split-position;
-  transition: all .8s cubic-bezier(.16,1.08,.38,.98);
+  transition: all 0.8s cubic-bezier(.16,1.08,.38,.98);
 
   span {
     display: block;
@@ -1101,7 +1080,7 @@ flex-direction: column;
 
 .mail_mask + .mail_mask {
   top: $split-position - .1;
-  height: 100 - $split-position + .1;
+  height: 100 - $split-position + 0.1;
 
   span {
     transform: translateY(-$split-position);
@@ -1141,11 +1120,10 @@ flex-direction: column;
   margin-right: 5vw;
   margin-bottom: 30vw;
   padding-top: 15vw;
-
-    // スマホ
-    @media screen and (max-width: 560px) {
-      padding-top: 20vw;
-    }
+  // スマホ
+  @media screen and (max-width: 560px) {
+    padding-top: 20vw;
+  }
 
   h2 {
     text-align: right;
@@ -1189,7 +1167,6 @@ flex-direction: column;
   width: 33%;
   padding-right: 1vw;
   overflow: hidden;
-
   // スマホ
   @media screen and (max-width: 560px) {
     display: block;
@@ -1204,7 +1181,6 @@ flex-direction: column;
   width: 33%;
   padding-left: 1vw;
   overflow: hidden;
-
   // スマホ
   @media screen and (max-width: 560px) {
     display: block;
@@ -1244,6 +1220,7 @@ flex-direction: column;
   width: 100% !important;
 }
 // 会社概要
+
 #Company {
   margin: 0 5vw 30vw;
   padding-top: 15vw;
@@ -1285,7 +1262,7 @@ flex-direction: column;
   td,
   tr {
     border: solid 1px #FDFDFD;
-    padding: .5rem;
+    padding: 0.5rem;
     text-align: center;
     vertical-align: middle;
   }
