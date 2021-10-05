@@ -781,11 +781,22 @@ h3 {
 
   .Service_inner_right {
     padding-left: 12vw;
+
     // スマホ
     @media screen and (max-width: 560px) {
       padding-left: 0;
       text-align: center;
     }
+  }
+
+  .Service_inner_right_flex {
+    display: flex;
+    justify-content: space-between;
+
+    // タブレット
+    @media screen and (max-width: 980px) {
+    flex-direction: column;
+  }
   }
 }
 
