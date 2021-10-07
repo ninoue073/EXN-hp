@@ -393,6 +393,7 @@ main {
 // トップ
 
 .Top_img {
+  overflow: hidden;
   position: relative;
   top: 0;
   right: 0;
@@ -446,6 +447,25 @@ main {
     @media screen and (max-width: 560px) {
       font-size: $h3-size /1.5;
     }
+  }
+
+  ＆::before {
+animation: img-wrap 2s cubic-bezier(.4, 0, .2, 1) forwards;
+background: #fff;
+bottom: 0;
+content: '';
+left: 0;
+pointer-events: none;
+position: absolute;
+right: 0;
+top: 0;
+z-index: 1;
+}
+}
+
+@keyframes Top_img {
+  100% {
+    transform: translateX(100%);
   }
 }
 // === title =====
