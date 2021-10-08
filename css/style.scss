@@ -449,13 +449,14 @@ main {
   }
 }
 
-.Top_img_wrap{
+.img-wrap {
   overflow: hidden;
   position: relative;
+}
 
-  ＆::before {
-  animation: Top_img_wrap 2s cubic-bezier(.4, 0, .2, 1) forwards;
-  background: #EE8F28;
+.img-wrap:before {
+  animation: img-wrap 2s cubic-bezier(.4, 0, .2, 1) forwards;
+  background: #fff;
   bottom: 0;
   content: '';
   left: 0;
@@ -464,19 +465,14 @@ main {
   right: 0;
   top: 0;
   z-index: 1;
-  }
-
-  img {
-    width: 100%;
-    height: auto;
-  }
 }
 
-@keyframes Top_img_wrap {
+@keyframes img-wrap {
   100% {
     transform: translateX(100%);
   }
 }
+
 // === title =====
 
 h2 {
