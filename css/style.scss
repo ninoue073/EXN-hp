@@ -397,28 +397,10 @@ main {
   top: 0;
   right: 0;
 
-.Top_img_wrap{
-  overflow: hidden;
-  position: relative;
-
-  ＆::before {
-  animation: Top_img_wrap 2s cubic-bezier(.4, 0, .2, 1) forwards;
-  background: #fff;
-  bottom: 0;
-  content: '';
-  left: 0;
-  pointer-events: none;
-  position: absolute;
-  right: 0;
-  top: 0;
-  z-index: 1;
-  }
-
   img {
     width: 100%;
     height: auto;
   }
-}
 
   .Top_txt1 {
     color: $point-orange;
@@ -464,6 +446,24 @@ main {
     @media screen and (max-width: 560px) {
       font-size: $h3-size /1.5;
     }
+  }
+}
+
+.Top_img_wrap{
+  overflow: hidden;
+  position: relative;
+
+  ＆::before {
+  animation: Top_img_wrap 2s cubic-bezier(.4, 0, .2, 1) forwards;
+  background: #EE8F28;
+  bottom: 0;
+  content: '';
+  left: 0;
+  pointer-events: none;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 1;
   }
 }
 
