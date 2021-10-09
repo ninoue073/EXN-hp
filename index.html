@@ -141,17 +141,11 @@
   <main>
     <!-- トップ -->
     <section id="Top">
-      <div class="Top_img">
+      <div class="Top_img img-wrap_top scroll-block">
         <img src="images/top.jpg" alt="exn(エクスン)">
         <p class="Top_txt1">exn-japan.com</p>
         <p class="Top_txt2"><span class="outline">アナログとデジタルの融合で<br class="br_switch">ITビジネスを創造する</span></p>
       </div>
-    </section>
-
-    <section>
-      <div class="img-wrap">
-        <img src="images/top.jpg" alt="exn(エクスン)">
-</div>
     </section>
 
     <!-- ニュース -->
@@ -185,9 +179,9 @@
 
           </ul>
         </div>
-        <div class="black_box" id="black_box1">
+        <div class="black_box scroll-block" id="black_box1">
         </div>
-        <div class="News_img">
+        <div class="News_img scroll-block">
           <img src="images/news.jpg" alt="News">
         </div>
       </div>
@@ -244,7 +238,7 @@
             </li>
           </ul>
         </div>
-        <div class="black_box" id="black_box2">
+        <div class="black_box scroll-block" id="black_box2">
         </div>
       </div>
       <!-- サービス1 印刷・広告・販促物の価格破壊を実現 -->
@@ -302,7 +296,7 @@
               </ul>
             </div>
           </div>
-          <div class="black_box_wide">
+          <div class="black_box_wide scroll-block">
           </div>
         </div>
       </div>
@@ -333,7 +327,7 @@
               </div>
             </div>
           </div>
-          <div class="black_box_wide">
+          <div class="black_box_wide scroll-block">
           </div>
         </div>
       </div>
@@ -383,7 +377,7 @@
               <p>特産品（農林水産物）等をインターネットを利用し全国へ販売いたします。</p>
             </div>
           </div>
-          <div class="black_box_wide">
+          <div class="black_box_wide scroll-block">
           </div>
         </div>
       </div>
@@ -395,7 +389,7 @@
         <div class="Contact_box_inner">
           <h2>CONTACT</h2>
           <div class="Contact_box_inner_flex">
-            <div class="Contact_img">
+            <div class="Contact_img scroll-block">
               <img src="images/contact.jpg" alt="Contact">
             </div>
             <div class="Contact_e-mail">
@@ -410,7 +404,7 @@
             </div>
           </div>
         </div>
-        <div class="black_box" id="black_box3">
+        <div class="black_box scroll-block" id="black_box3">
         </div>
       </div>
     </section>
@@ -421,7 +415,7 @@
         <div class="Facebook_box_inner">
           <h2>FACEBOOK</h2>
         </div>
-        <div class="black_box" id="black_box4">
+        <div class="black_box scroll-block" id="black_box4">
         </div>
       </div>
       <div class="movie">
@@ -496,6 +490,19 @@
               }, 200);
             });
           });
+
+          $(function() {
+  $(window).scroll(function() {
+    $(".scroll-block").each(function() {
+      var scroll = $(window).scrollTop();
+      var blockPosition = $(this).offset().top;
+      var windowHeihgt = $(window).height();
+      if (scroll > blockPosition - windowHeihgt + 300) {
+        $(this).addClass("blockIn");
+      }
+    });
+  });
+});
         </script>
 
       </div>

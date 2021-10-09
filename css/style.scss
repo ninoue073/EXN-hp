@@ -390,6 +390,7 @@ main {
     transform: scale(1);
   }
 }
+
 // トップ
 
 .Top_img {
@@ -449,14 +450,13 @@ main {
   }
 }
 
-.img-wrap {
+.img-wrap_top {
   overflow: hidden;
   position: relative;
-}
 
-.img-wrap:before {
-  animation: img-wrap 2s cubic-bezier(.4, 0, .2, 1) forwards;
-  background: #fff;
+&::before{
+  animation: img-wrap_top 2s cubic-bezier(.4, 0, .2, 1) forwards;
+  background: $background-black;
   bottom: 0;
   content: '';
   left: 0;
@@ -466,8 +466,9 @@ main {
   top: 0;
   z-index: 1;
 }
+}
 
-@keyframes img-wrap {
+@keyframes img-wrap_top {
   100% {
     transform: translateX(100%);
   }
@@ -510,6 +511,17 @@ h3 {
   top: 0;
   left: 0;
   z-index: 10;
+  animation-name: faderightL;
+    animation: faderightL 2s cubic-bezier(.4, 0, .2, 1) forwards;
+}
+
+@keyframes faderightL {
+from {
+    transform: translateX(-100%);
+}
+to {
+transform: translateX(0);
+}
 }
 
 %black-boxR {
@@ -517,6 +529,17 @@ h3 {
   top: 0;
   right: 0;
   z-index: 10;
+  animation-name: faderightR;
+    animation: faderightR 2s cubic-bezier(.4, 0, .2, 1) forwards;
+}
+
+@keyframes faderightR {
+from {
+    transform: translateX(100%);
+}
+to {
+transform: translateX(0);
+}
 }
 
 %black_box_base20L {
@@ -585,6 +608,53 @@ h3 {
   position: relative;
   z-index: 30;
 }
+
+// 画像アニメーション
+.img-wrap_left,
+.img-wrap_right {
+  overflow: hidden;
+  position: relative;
+}
+
+.img-wrap_left::before{
+  animation: img-wrap_left 2s cubic-bezier(.4, 0, .2, 1) forwards;
+}
+
+.img-wrap_right::before{
+  animation: img-wrap_right 2s cubic-bezier(.4, 0, .2, 1) forwards;
+}
+
+.img-wrap_left::before,
+.img-wrap_right::before {
+  background: $background-black;
+  bottom: 0;
+  content: '';
+  left: 0;
+  pointer-events: none;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 1;
+}
+
+@keyframes img-wrap_left {
+  from {
+      transform: translateX(-100%);
+  }
+  to {
+  transform: translateX(0);
+  }
+  }
+
+@keyframes img-wrap_right {
+  from {
+      transform: translateX(100%);
+  }
+  to {
+  transform: translateX(0);
+  }
+  }
+
 // ニュース
 
 #News {
