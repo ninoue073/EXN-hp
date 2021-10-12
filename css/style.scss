@@ -1008,7 +1008,7 @@ h3 {
 
   // デスクトップ
   @media screen and (min-width: 1920px){
-    max-width: 800px;
+    max-width: 900px;
   }
 
   // スマホ
@@ -1025,6 +1025,11 @@ h3 {
   top: 0;
   left: 0;
 
+  // デスクトップ
+  @media screen and (min-width: 1920px){
+    width: 150px;
+  }
+
   // スマホ
   @media screen and (max-width: 560px) {
     width: 120px;
@@ -1036,7 +1041,7 @@ h3 {
     height: auto;
     position: relative;
     z-index: 20;
-    
+
     // スマホ
     @media screen and (max-width: 560px) {
       padding-bottom: 10px;
