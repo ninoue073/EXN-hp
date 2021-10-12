@@ -899,7 +899,7 @@ h3 {
     // デスクトップ
   @media screen and (min-width: 1920px){
     width: 800px;
-    height: auto;
+    height: 462.8px;
   }
 
     // スマホ
@@ -1005,6 +1005,12 @@ h3 {
   display: flex;
   justify-content: space-between;
   padding: 1vw 0 3vw;
+
+  // デスクトップ
+  @media screen and (min-width: 1920px){
+    max-width: 600px;
+  }
+
   // スマホ
   @media screen and (max-width: 560px) {
     flex-wrap: wrap;
@@ -1018,6 +1024,13 @@ h3 {
   position: relative;
   top: 0;
   left: 0;
+
+  // デスクトップ
+  @media screen and (min-width: 1920px){
+    width: 120px;
+    padding: 0 10px 10px;
+  }
+
   // スマホ
   @media screen and (max-width: 560px) {
     width: 120px;
@@ -1050,6 +1063,15 @@ h3 {
   top: 1vw;
   left: 1vw;
   z-index: 10;
+
+  // デスクトップ
+    @media screen and (min-width: 1920px){
+      width: 120px;
+      height: 120px;
+      top: 11px;
+      left: 21px;
+    }
+
   // スマホ
   @media screen and (max-width: 560px) {
     width: 120px;
