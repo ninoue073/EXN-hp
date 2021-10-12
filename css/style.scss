@@ -398,7 +398,7 @@ main {
 
   // デスクトップ
     @media screen and (min-width: 1920px){
-      max-width: 80%;
+      max-width: 1200px;
     }
 
   img {
@@ -885,6 +885,13 @@ h3 {
 .Service_img {
   margin-bottom: 2vw;
   display: inline-block;
+
+  // デスクトップ
+    @media screen and (min-width: 1920px){
+      max-width: 900px;
+      height:auto;
+    }
+
   // スマホ
   @media screen and (max-width: 560px) {
     padding-bottom: 5vw;
