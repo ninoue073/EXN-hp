@@ -396,6 +396,11 @@ main {
   top: 0;
   right: 0;
 
+  // デスクトップ
+    @media screen and (min-width: 1920px){
+      max-width: 1200px;
+    }
+
   img {
     width: 100%;
     height: auto;
@@ -409,11 +414,6 @@ main {
     position: absolute;
     top: 43vw;
     right: 1vw;
-
-    // デスクトップ
-      @media screen and (min-width: 1920px){
-        max-width: 1200px;
-      }
 
     // タブレット
     @media screen and (max-width: 980px) {
