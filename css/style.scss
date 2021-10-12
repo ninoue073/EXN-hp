@@ -1135,6 +1135,12 @@ h3 {
     width: 28vw;
     height: 22vw;
     object-fit: cover;
+
+    // デスクトップ
+  @media screen and (min-width: 1920px){
+    width: 400px;
+    height: 314.3px;
+  }
   }
 }
 
