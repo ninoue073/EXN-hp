@@ -415,6 +415,12 @@ main {
     top: 43vw;
     right: 1vw;
 
+    // デスクトップ
+      @media screen and (min-width: 1920px){
+        top: 500px;
+        right: 1000px;
+      }
+
     // タブレット
     @media screen and (max-width: 980px) {
       font-size: $h3-size /1.34;
