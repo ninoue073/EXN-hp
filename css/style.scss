@@ -1294,6 +1294,12 @@ h3 {
 .FB_link {
   display: table;
   width: 100%;
+
+  // デスクトップ
+    @media screen and (min-width: 1920px){
+      max-width: 1000px;
+    }
+
   // スマホ
   @media screen and (max-width: 560px) {
     display: block;
@@ -1305,11 +1311,6 @@ h3 {
   width: 33%;
   padding-right: 1vw;
   overflow: hidden;
-
-  // デスクトップ
-    @media screen and (min-width: 1920px){
-      max-width: 1000px;
-    }
 
   // スマホ
   @media screen and (max-width: 560px) {
