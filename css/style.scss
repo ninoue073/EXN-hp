@@ -55,7 +55,6 @@ header {
 }
 
 main {
-  max-width: 1920px;
   margin-left: 20vw;
   position: relative;
   z-index: 1;
@@ -390,7 +389,6 @@ main {
     transform: scale(1);
   }
 }
-
 // トップ
 
 .Top_img {
@@ -411,10 +409,17 @@ main {
     position: absolute;
     top: 43vw;
     right: 1vw;
+
+    // デスクトップ
+      @media screen and (min-width: 1920px){
+        max-width: 1200px;
+      }
+
     // タブレット
     @media screen and (max-width: 980px) {
       font-size: $h3-size /1.34;
     }
+
     // スマホ
     @media screen and (max-width: 560px) {
       font-size: $h3-size /1.5;
@@ -450,32 +455,45 @@ main {
   }
 }
 
-.img-wrap_top {
+.img-wrap {
   overflow: hidden;
   position: relative;
 
-&::before{
-  animation: img-wrap_top 2s cubic-bezier(.4, 0, .2, 1) forwards;
-  background: $background-black;
-  bottom: 0;
-  content: '';
-  left: 0;
-  pointer-events: none;
-  position: absolute;
-  right: 0;
-  top: 0;
-  z-index: 1;
-}
+  &::after,
+  &::before {
+    animation: 5s cubic-bezier(.4, 0, .2, 1) forwards;
+    background: $background-black;
+    content: '';
+    left: 0;
+    pointer-events: none;
+    position: absolute;
+    right: 0;
+    z-index: 1;
+  }
 }
 
-@keyframes img-wrap_top {
+.img-wrap::before {
+  animation-name: img-wrap-before;
+  top: 0;
+  bottom: 50%;
+}
+
+.img-wrap::after {
+  animation-name: img-wrap-after;
+  top: 50%;
+  bottom: 0;
+}
+@keyframes img-wrap-before {
   100% {
     transform: translateX(100%);
   }
 }
-
+@keyframes img-wrap-after {
+  100% {
+    transform: translateX(-100%);
+  }
+}
 // === title =====
-
 h2 {
   font-size: $h2-size;
   padding: 2.8vw 0;
@@ -500,6 +518,7 @@ h3 {
   padding-top: 15vw;
 }
 // === black_box =====
+
 .black_box {
   background: $box-black;
   width: 22vw;
@@ -511,17 +530,20 @@ h3 {
   top: 0;
   left: 0;
   z-index: 10;
-  animation-name: faderightL;
-    animation: faderightL 2s cubic-bezier(.4, 0, .2, 1) forwards;
-}
 
+  &.blockIn {
+    animation-name: faderightL;
+    animation: faderightL 2s cubic-bezier(.4, 0, .2, 1) forwards;
+  }
+}
 @keyframes faderightL {
-from {
+  from {
     transform: translateX(-100%);
-}
-to {
-transform: translateX(0);
-}
+  }
+
+  to {
+    transform: translateX(0);
+  }
 }
 
 %black-boxR {
@@ -529,17 +551,20 @@ transform: translateX(0);
   top: 0;
   right: 0;
   z-index: 10;
-  animation-name: faderightR;
-    animation: faderightR 2s cubic-bezier(.4, 0, .2, 1) forwards;
-}
 
+  &.blockIn {
+    animation-name: faderightR;
+    animation: faderightR 2s cubic-bezier(.4, 0, .2, 1) forwards;
+  }
+}
 @keyframes faderightR {
-from {
+  from {
     transform: translateX(100%);
-}
-to {
-transform: translateX(0);
-}
+  }
+
+  to {
+    transform: translateX(0);
+  }
 }
 
 %black_box_base20L {
@@ -595,6 +620,20 @@ transform: translateX(0);
   top: 0;
   left: -5vw;
   z-index: 10;
+
+  &.blockIn {
+    animation-name: faderightL;
+    animation: faderightL 2s cubic-bezier(.4, 0, .2, 1) forwards;
+  }
+}
+@keyframes faderightL {
+  from {
+    transform: translateX(-100%);
+  }
+
+  to {
+    transform: translateX(0);
+  }
 }
 
 %black_box_wide_base20 {
@@ -608,55 +647,7 @@ transform: translateX(0);
   position: relative;
   z-index: 30;
 }
-
-// 画像アニメーション
-.img-wrap_left,
-.img-wrap_right {
-  overflow: hidden;
-  position: relative;
-}
-
-.img-wrap_left::before{
-  animation: img-wrap_left 2s cubic-bezier(.4, 0, .2, 1) forwards;
-}
-
-.img-wrap_right::before{
-  animation: img-wrap_right 2s cubic-bezier(.4, 0, .2, 1) forwards;
-}
-
-.img-wrap_left::before,
-.img-wrap_right::before {
-  background: $background-black;
-  bottom: 0;
-  content: '';
-  left: 0;
-  pointer-events: none;
-  position: absolute;
-  right: 0;
-  top: 0;
-  z-index: 1;
-}
-
-@keyframes img-wrap_left {
-  from {
-      transform: translateX(-100%);
-  }
-  to {
-  transform: translateX(0);
-  }
-  }
-
-@keyframes img-wrap_right {
-  from {
-      transform: translateX(100%);
-  }
-  to {
-  transform: translateX(0);
-  }
-  }
-
 // ニュース
-
 #News {
   margin-left: 5vw;
   margin-right: 5vw;
