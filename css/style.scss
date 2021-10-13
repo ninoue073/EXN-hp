@@ -700,10 +700,16 @@ h3 {
   z-index: 15;
 
   img {
-    width: 29.3vw;
-    height: 37.3vw;
+    width: 400px;
+    height: 509.1px;
     object-fit: cover;
     object-position: 10% 90%;
+
+    // デスクトップ
+  @media screen and (min-width: 1920px){
+    width: 29.3vw;
+    height: 37.3vw;
+  }
   }
 }
 // サービス
