@@ -543,6 +543,12 @@ h3 {
   background: $box-black;
   width: 22vw;
   height: 28vw;
+
+  // デスクトップ
+  @media screen and (min-width: 1920px){
+    width:455px;
+    height: 579px;
+  }
 }
 
 %black-boxL {
@@ -641,6 +647,12 @@ h3 {
   left: -5vw;
   z-index: 10;
 
+  // デスクトップ
+  @media screen and (min-width: 1920px){
+    width: 910px;
+    height: 1158.1px;
+  }
+
   &.blockIn {
     animation-name: faderightL;
     animation: faderightL 2s cubic-bezier(.4, 0, .2, 1) forwards;
@@ -720,8 +732,8 @@ h3 {
 
     // デスクトップ
   @media screen and (min-width: 1920px){
-    width: 400px;
-    height: 509.1px;
+    width: 600px;
+    height: 763.8px;
   }
   }
 }
