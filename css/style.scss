@@ -1433,6 +1433,12 @@ h3 {
 
 .Company_box {
   @extend %black_box_base20L;
+
+  // デスクトップ
+  @media screen and (min-width: 1920px){
+    max-width: 1200px;
+    margin: 0 auto;
+  }
 }
 
 .Company_box_inner {
