@@ -86,7 +86,7 @@
       <div class="Menu-side">
         <div class="rogo">
           <a href="index.html">
-          <img src="images/exn_rogo.jpg" alt="exn">
+            <img src="images/exn_rogo.jpg" alt="exn">
           </a>
         </div>
         <div class="Menu_side">
@@ -441,80 +441,80 @@
       </div>
     </section>
 
-        <script type="text/javascript">
-          $(function() {
-            // ページプラグインの埋め込みコードを返す
-            function pagePluginCode1(w) {
+    <script type="text/javascript">
+      $(function() {
+        // ページプラグインの埋め込みコードを返す
+        function pagePluginCode1(w) {
 
-              // 書き換えたStep3のコードを「return」に記述
-              return '<div class="fb-page" data-href="https://www.facebook.com/exnkk/" data-tabs="timeline" data-width="' + w +
-                '" data-height="130" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="false"><blockquote cite="https://www.facebook.com/exnkk/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/exnkk/">株式会社E.x.N</a></blockquote></div>';
+          // 書き換えたStep3のコードを「return」に記述
+          return '<div class="fb-page" data-href="https://www.facebook.com/exnkk/" data-tabs="timeline" data-width="' + w +
+            '" data-height="130" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="false"><blockquote cite="https://www.facebook.com/exnkk/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/exnkk/">株式会社E.x.N</a></blockquote></div>';
+        }
+
+        // ページプラグインを追加する要素
+        var facebookWrap = $('.facebook-wrapper1');
+        var fbBeforeWidth = ''; // 前回変更したときの幅
+        var fbWidth = facebookWrap.width(); // 今回変更する幅
+        var fbTimer = false;
+        $(window).on('load resize', function() {
+          if (fbTimer !== false) {
+            clearTimeout(fbTimer);
+          }
+          fbTimer = setTimeout(function() {
+            fbWidth = Math.floor(facebookWrap.width()); // 変更後の幅を取得し、小数点以下切り捨て
+            // 前回の幅から変更があった場合のみ処理
+            if (fbWidth != fbBeforeWidth) {
+              facebookWrap.html(pagePluginCode1(fbWidth)); // ページプラグインのコード変更
+              window.FB.XFBML.parse(); // ページプラグインの再読み込み
+              fbBeforeWidth = fbWidth; // 今回変更分を保存
             }
+          }, 200);
+        });
+      });
 
-            // ページプラグインを追加する要素
-            var facebookWrap = $('.facebook-wrapper1');
-            var fbBeforeWidth = ''; // 前回変更したときの幅
-            var fbWidth = facebookWrap.width(); // 今回変更する幅
-            var fbTimer = false;
-            $(window).on('load resize', function() {
-              if (fbTimer !== false) {
-                clearTimeout(fbTimer);
-              }
-              fbTimer = setTimeout(function() {
-                fbWidth = Math.floor(facebookWrap.width()); // 変更後の幅を取得し、小数点以下切り捨て
-                // 前回の幅から変更があった場合のみ処理
-                if (fbWidth != fbBeforeWidth) {
-                  facebookWrap.html(pagePluginCode1(fbWidth)); // ページプラグインのコード変更
-                  window.FB.XFBML.parse(); // ページプラグインの再読み込み
-                  fbBeforeWidth = fbWidth; // 今回変更分を保存
-                }
-              }, 200);
-            });
-          });
+      $(function() {
+        // ページプラグインの埋め込みコードを返す
+        function pagePluginCode2(w) {
 
-          $(function() {
-            // ページプラグインの埋め込みコードを返す
-            function pagePluginCode2(w) {
+          // 書き換えたStep3のコードを「return」に記述
+          return '<div class="fb-page" data-href="https://www.facebook.com/passage.of.life.2014/" data-tabs="timeline" data-width="' + w +
+            '" data-height="130" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="false"><blockquote cite="https://www.facebook.com/passage.of.life.2014/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/passage.of.life.2014/">映画『僕の帰る場所Passage of Life』</a></blockquote></div>';
+        }
 
-              // 書き換えたStep3のコードを「return」に記述
-              return '<div class="fb-page" data-href="https://www.facebook.com/passage.of.life.2014/" data-tabs="timeline" data-width="' + w +
-                '" data-height="130" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="false"><blockquote cite="https://www.facebook.com/passage.of.life.2014/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/passage.of.life.2014/">映画『僕の帰る場所Passage of Life』</a></blockquote></div>';
+        // ページプラグインを追加する要素
+        var facebookWrap = $('.facebook-wrapper2');
+        var fbBeforeWidth = ''; // 前回変更したときの幅
+        var fbWidth = facebookWrap.width(); // 今回変更する幅
+        var fbTimer = false;
+        $(window).on('load resize', function() {
+          if (fbTimer !== false) {
+            clearTimeout(fbTimer);
+          }
+          fbTimer = setTimeout(function() {
+            fbWidth = Math.floor(facebookWrap.width()); // 変更後の幅を取得し、小数点以下切り捨て
+            // 前回の幅から変更があった場合のみ処理
+            if (fbWidth != fbBeforeWidth) {
+              facebookWrap.html(pagePluginCode2(fbWidth)); // ページプラグインのコード変更
+              window.FB.XFBML.parse(); // ページプラグインの再読み込み
+              fbBeforeWidth = fbWidth; // 今回変更分を保存
             }
+          }, 200);
+        });
+      });
 
-            // ページプラグインを追加する要素
-            var facebookWrap = $('.facebook-wrapper2');
-            var fbBeforeWidth = ''; // 前回変更したときの幅
-            var fbWidth = facebookWrap.width(); // 今回変更する幅
-            var fbTimer = false;
-            $(window).on('load resize', function() {
-              if (fbTimer !== false) {
-                clearTimeout(fbTimer);
-              }
-              fbTimer = setTimeout(function() {
-                fbWidth = Math.floor(facebookWrap.width()); // 変更後の幅を取得し、小数点以下切り捨て
-                // 前回の幅から変更があった場合のみ処理
-                if (fbWidth != fbBeforeWidth) {
-                  facebookWrap.html(pagePluginCode2(fbWidth)); // ページプラグインのコード変更
-                  window.FB.XFBML.parse(); // ページプラグインの再読み込み
-                  fbBeforeWidth = fbWidth; // 今回変更分を保存
-                }
-              }, 200);
-            });
+      $(function() {
+        $(window).on("scroll", function() {
+          $(".scroll-block").each(function() {
+            var scroll = $(window).scrollTop();
+            var blockPosition = $(this).offset().top;
+            var windowHeihgt = $(window).height();
+            if (scroll > blockPosition - windowHeihgt + 300) {
+              $(this).addClass("blockIn");
+            }
           });
-
-          $(function() {
-            $(window).on("scroll", function() {
-              $(".scroll-block").each(function() {
-                var scroll = $(window).scrollTop();
-                var blockPosition = $(this).offset().top;
-                var windowHeihgt = $(window).height();
-                if (scroll > blockPosition - windowHeihgt + 300) {
-                  $(this).addClass("blockIn");
-                }
-              });
-            });
-          });
-        </script>
+        });
+      });
+    </script>
 
     <footer>
       <a href="index.html">EXN</a>

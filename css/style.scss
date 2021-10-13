@@ -59,12 +59,10 @@ main {
   position: relative;
   z-index: 1;
   overflow: hidden;
-
   // デスクトップ
-  @media screen and (min-width: 1920px){
+  @media screen and (min-width: 1920px) {
     max-width: 1200px;
   }
-
   // スマホ
   @media screen and (max-width: 560px) {
     margin-left: 0;
@@ -124,8 +122,8 @@ main {
       .Menu > div {
         display: flex;
         overflow: hidden;
-        width: 200vw;
-        height: 200vw;
+        width: 400vw;
+        height: 400vw;
         transition: all 0.4s ease;
         -webkit-transform: scale(0);
         transform: scale(0);
@@ -274,6 +272,11 @@ main {
     }
   }
 }
+@-moz-document url-prefix() {
+  .header_menu .Menu-hamburger .Menu > div {
+    margin-bottom: 200px;
+  }
+}
 // メニュー サイド
 
 .Menu-side {
@@ -401,12 +404,11 @@ main {
   position: relative;
   top: 0;
   right: 0;
-
   // デスクトップ
-    @media screen and (min-width: 1920px){
-      max-width: 1200px;
-      margin: 0 auto;
-    }
+  @media screen and (min-width: 1920px) {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
 
   img {
     width: 100%;
@@ -421,18 +423,15 @@ main {
     position: absolute;
     top: 43vw;
     right: 1vw;
-
     // デスクトップ
-      @media screen and (min-width: 1920px){
-        top: 650px;
-        right: 10px;
-      }
-
+    @media screen and (min-width: 1920px) {
+      top: 650px;
+      right: 10px;
+    }
     // タブレット
     @media screen and (max-width: 980px) {
       font-size: $h3-size /1.34;
     }
-
     // スマホ
     @media screen and (max-width: 560px) {
       font-size: $h3-size /1.5;
@@ -445,13 +444,11 @@ main {
     position: absolute;
     top: 42vw;
     right: 3vw;
-
     // デスクトップ
-  @media screen and (min-width: 1920px){
-    top: 645px;
-    right: 30px;
-  }
-
+    @media screen and (min-width: 1920px) {
+      top: 645px;
+      right: 30px;
+    }
     // スマホ
     @media screen and (max-width: 560px) {
       top: 43vw;
@@ -463,6 +460,7 @@ main {
     display: inline-block;
     color: #070101;
     font-size: $h3-size;
+    line-height: 1.2;
     text-shadow: 1px 1px 0 rgba(253, 253, 253, .6), -1px 1px 0 rgba(253, 253, 253, .6), 1px -1px 0 rgba(253, 253, 253, .6), -1px -1px 0 rgba(253, 253, 253, .6), 1px 0 0 rgba(253, 253, 253, .6), 0 1px 0 rgba(253, 253, 253, .6), -1px 0 0 rgba(253, 253, 253, .6), 0 -1px 0 rgba(253, 253, 253, .6);
     // タブレット
     @media screen and (max-width: 980px) {
@@ -472,6 +470,11 @@ main {
     @media screen and (max-width: 560px) {
       font-size: $h3-size /1.5;
     }
+  }
+}
+@-moz-document url-prefix() {
+  .outline {
+    line-height: 0.8;
   }
 }
 
@@ -514,6 +517,7 @@ main {
   }
 }
 // === title =====
+
 h2 {
   font-size: $h2-size;
   padding: 2.8vw 0;
@@ -543,10 +547,9 @@ h3 {
   background: $box-black;
   width: 22vw;
   height: 28vw;
-
   // デスクトップ
-  @media screen and (min-width: 1920px){
-    width:300px;
+  @media screen and (min-width: 1920px) {
+    width: 300px;
     height: 381.9px;
   }
 }
@@ -612,17 +615,14 @@ h3 {
   top: 0;
   left: 11vw;
   z-index: 30;
-
   // デスクトップ
-  @media screen and (min-width: 1920px){
+  @media screen and (min-width: 1920px) {
     left: 3vw;
   }
-
   // タブレット
   @media screen and (max-width: 980px) {
     left: 5vw;
   }
-  
   // スマホ
   @media screen and (max-width: 560px) {
     left: 0;
@@ -634,17 +634,14 @@ h3 {
   top: 0;
   right: 11vw;
   z-index: 30;
-
   // デスクトップ
-  @media screen and (min-width: 1920px){
+  @media screen and (min-width: 1920px) {
     right: 3vw;
   }
-
   // タブレット
   @media screen and (max-width: 980px) {
     right: 5vw;
   }
-
   // スマホ
   @media screen and (max-width: 560px) {
     right: 0;
@@ -660,9 +657,8 @@ h3 {
   top: 0;
   left: -5vw;
   z-index: 10;
-
   // デスクトップ
-  @media screen and (min-width: 1920px){
+  @media screen and (min-width: 1920px) {
     width: 600px;
     height: 381.9px;
   }
@@ -694,6 +690,7 @@ h3 {
   z-index: 30;
 }
 // ニュース
+
 #News {
   margin-left: 5vw;
   margin-right: 5vw;
@@ -702,9 +699,8 @@ h3 {
 
 .News_box {
   @extend %black_box_base20L;
-
   // デスクトップ
-  @media screen and (min-width: 1920px){
+  @media screen and (min-width: 1920px) {
     max-width: 1200px;
     margin: 0 auto;
   }
@@ -713,7 +709,6 @@ h3 {
 .News_box_inner {
   @extend %black_box_base30L;
   width: 63vw;
-
   // スマホ
   @media screen and (max-width: 560px) {
     width: 100%;
@@ -744,12 +739,11 @@ h3 {
     height: 37.3vw;
     object-fit: cover;
     object-position: 10% 90%;
-
     // デスクトップ
-  @media screen and (min-width: 1920px){
-    width: 400px;
-    height: 509.2px;
-  }
+    @media screen and (min-width: 1920px) {
+      width: 400px;
+      height: 509.2px;
+    }
   }
 }
 // サービス
@@ -764,9 +758,8 @@ h3 {
 
 .Service_menu_box {
   @extend %black_box_base20R;
-
   // デスクトップ
-  @media screen and (min-width: 1920px){
+  @media screen and (min-width: 1920px) {
     max-width: 1200px;
     margin: 0 auto;
   }
@@ -910,9 +903,8 @@ h3 {
 
 .Service_item {
   padding-top: 10vw;
-
   // デスクトップ
-  @media screen and (min-width: 1920px){
+  @media screen and (min-width: 1920px) {
     max-width: 1200px;
     margin: 0 auto;
   }
@@ -943,7 +935,6 @@ h3 {
 .Service_img {
   margin-bottom: 2vw;
   display: inline-block;
-
   // スマホ
   @media screen and (max-width: 560px) {
     padding-bottom: 5vw;
@@ -953,13 +944,11 @@ h3 {
     width: 60.5vw;
     height: 35vw;
     object-fit: cover;
-
     // デスクトップ
-  @media screen and (min-width: 1920px){
-    width: 800px;
-    height: 462.8px;
-  }
-
+    @media screen and (min-width: 1920px) {
+      width: 800px;
+      height: 462.8px;
+    }
     // スマホ
     @media screen and (max-width: 560px) {
       width: 85.5vw;
@@ -1063,12 +1052,10 @@ h3 {
   display: flex;
   justify-content: space-between;
   padding: 1vw 0 3vw;
-
   // デスクトップ
-  @media screen and (min-width: 1920px){
+  @media screen and (min-width: 1920px) {
     max-width: 1000px;
   }
-
   // スマホ
   @media screen and (max-width: 560px) {
     flex-wrap: wrap;
@@ -1082,12 +1069,10 @@ h3 {
   position: relative;
   top: 0;
   left: 0;
-
   // デスクトップ
-  @media screen and (min-width: 1920px){
+  @media screen and (min-width: 1920px) {
     width: 180px;
   }
-
   // スマホ
   @media screen and (max-width: 560px) {
     width: 120px;
@@ -1099,7 +1084,6 @@ h3 {
     height: auto;
     position: relative;
     z-index: 20;
-
     // スマホ
     @media screen and (max-width: 560px) {
       padding-bottom: 10px;
@@ -1121,13 +1105,11 @@ h3 {
   top: 1vw;
   left: 1vw;
   z-index: 10;
-
   // デスクトップ
-  @media screen and (min-width: 1920px){
+  @media screen and (min-width: 1920px) {
     width: 180px;
     height: 180px;
   }
-
   // スマホ
   @media screen and (max-width: 560px) {
     width: 120px;
@@ -1193,12 +1175,11 @@ h3 {
     width: 28vw;
     height: 22vw;
     object-fit: cover;
-
     // デスクトップ
-  @media screen and (min-width: 1920px){
-    width: 400px;
-    height: 314.3px;
-  }
+    @media screen and (min-width: 1920px) {
+      width: 400px;
+      height: 314.3px;
+    }
   }
 }
 
@@ -1311,7 +1292,6 @@ h3 {
   margin-right: 5vw;
   margin-bottom: 30vw;
   padding-top: 15vw;
-
   // スマホ
   @media screen and (max-width: 560px) {
     padding-top: 20vw;
@@ -1324,9 +1304,8 @@ h3 {
 
 .Facebook_box {
   @extend %black_box_base20R;
-
   // デスクトップ
-  @media screen and (min-width: 1920px){
+  @media screen and (min-width: 1920px) {
     max-width: 1200px;
     margin: 0 auto;
   }
@@ -1348,24 +1327,21 @@ h3 {
   img {
     width: 100%;
     height: auto;
-
     // デスクトップ
-  @media screen and (min-width: 1920px){
-    max-width: 1000px;
-  }
+    @media screen and (min-width: 1920px) {
+      max-width: 1000px;
+    }
   }
 }
 
 .FB_link {
   display: table;
   width: 100%;
-
   // デスクトップ
-    @media screen and (min-width: 1920px){
-      width: 80%;
-      margin: 0 auto;
-    }
-
+  @media screen and (min-width: 1920px) {
+    width: 80%;
+    margin: 0 auto;
+  }
   // スマホ
   @media screen and (max-width: 560px) {
     display: block;
@@ -1377,7 +1353,6 @@ h3 {
   width: 33%;
   padding-right: 1vw;
   overflow: hidden;
-
   // スマホ
   @media screen and (max-width: 560px) {
     display: block;
@@ -1448,9 +1423,8 @@ h3 {
 
 .Company_box {
   @extend %black_box_base20L;
-
   // デスクトップ
-  @media screen and (min-width: 1920px){
+  @media screen and (min-width: 1920px) {
     max-width: 1200px;
     margin: 0 auto;
   }
@@ -1490,12 +1464,10 @@ h3 {
 
   .txt {
     width: 38vw;
-
     // デスクトップ
-  @media screen and (min-width: 1920px){
-    width: 400px;
-  }
-
+    @media screen and (min-width: 1920px) {
+      width: 400px;
+    }
     // スマホ
     @media screen and (max-width: 560px) {
       width: 42vw;
