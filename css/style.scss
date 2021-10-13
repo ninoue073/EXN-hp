@@ -405,6 +405,7 @@ main {
   // デスクトップ
     @media screen and (min-width: 1920px){
       max-width: 1200px;
+      margin: 0 auto;
     }
 
   img {
@@ -675,6 +676,12 @@ h3 {
 
 .News_box {
   @extend %black_box_base20L;
+
+  // デスクトップ
+  @media screen and (min-width: 1920px){
+    max-width: 1200px;
+    margin: 0 auto;
+  }
 }
 
 .News_box_inner {
@@ -730,6 +737,12 @@ h3 {
 
 .Service_menu_box {
   @extend %black_box_base20R;
+
+  // デスクトップ
+  @media screen and (min-width: 1920px){
+    max-width: 1200px;
+    margin: 0 auto;
+  }
 }
 
 .Service_menu_box_inner {
@@ -870,6 +883,12 @@ h3 {
 
 .Service_item {
   padding-top: 10vw;
+
+  // デスクトップ
+  @media screen and (min-width: 1920px){
+    max-width: 1200px;
+    margin: 0 auto;
+  }
   // スマホ
   @media screen and (max-width: 560px) {
     padding-top: 15vw;
@@ -1265,6 +1284,7 @@ h3 {
   margin-right: 5vw;
   margin-bottom: 30vw;
   padding-top: 15vw;
+
   // スマホ
   @media screen and (max-width: 560px) {
     padding-top: 20vw;
@@ -1277,6 +1297,12 @@ h3 {
 
 .Facebook_box {
   @extend %black_box_base20R;
+
+  // デスクトップ
+  @media screen and (min-width: 1920px){
+    max-width: 1200px;
+    margin: 0 auto;
+  }
 }
 
 .Facebook_box_inner {
@@ -1310,6 +1336,7 @@ h3 {
   // デスクトップ
     @media screen and (min-width: 1920px){
       width: 80%;
+      margin: 0 auto;
     }
 
   // スマホ
