@@ -612,6 +612,12 @@ h3 {
   top: 0;
   left: 11vw;
   z-index: 30;
+
+  // デスクトップ
+  @media screen and (min-width: 1920px){
+    left: 3vw;
+  }
+
   // タブレット
   @media screen and (max-width: 980px) {
     left: 5vw;
@@ -699,11 +705,6 @@ h3 {
 .News_box_inner {
   @extend %black_box_base30L;
   width: 63vw;
-
-  // デスクトップ
-  @media screen and (min-width: 1920px){
-    width: 1000px;
-  }
 
   // スマホ
   @media screen and (max-width: 560px) {
