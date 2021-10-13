@@ -699,6 +699,12 @@ h3 {
 .News_box_inner {
   @extend %black_box_base30L;
   width: 63vw;
+
+  // デスクトップ
+  @media screen and (min-width: 1920px){
+    width: 100%;
+  }
+
   // スマホ
   @media screen and (max-width: 560px) {
     width: 100%;
