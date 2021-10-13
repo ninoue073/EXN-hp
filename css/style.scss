@@ -622,6 +622,7 @@ h3 {
   @media screen and (max-width: 980px) {
     left: 5vw;
   }
+  
   // スマホ
   @media screen and (max-width: 560px) {
     left: 0;
@@ -633,10 +634,17 @@ h3 {
   top: 0;
   right: 11vw;
   z-index: 30;
+
+  // デスクトップ
+  @media screen and (min-width: 1920px){
+    right: 3vw;
+  }
+
   // タブレット
   @media screen and (max-width: 980px) {
     right: 5vw;
   }
+
   // スマホ
   @media screen and (max-width: 560px) {
     right: 0;
